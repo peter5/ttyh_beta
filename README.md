@@ -15,6 +15,11 @@ Demo
 how to run
 ---
 ```
+  浏览器中查看
+  cd ttyh_employee
+  ionic serve
+  
+  客户端
   $ npm install -g cordova ionic
   $ ionic platform add ios / ionic platform add android
   $ ionic build ios / ionic build android
