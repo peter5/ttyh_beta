@@ -1,0 +1,54 @@
+<ion-view view-title="我的钱包">
+	<ion-content>
+	<div style="background:#28a44c;height:100px;text-align:center;">
+		<br>
+		<span style="color:#ffffff;font-size:20px;">余额</span>
+		<br>
+		<br>
+		<span style="color:#ffffff;font-size:40px;">{{wallet._serverData.balance}}</span><span style="color:#ffffff;font-size:20px;">元</span>
+	</div>
+
+	<div class="list card" ng-if="!wallet">
+  		<a href="#/tab/my/wallet/add" class="item item-icon-left">
+    		<i class="icon ion-card"></i>
+    		添加银行卡
+  		</a>
+	</div>
+
+	<div class="list card" ng-if="wallet" style="text-align:center;">
+		<div class="row">
+			<div class="col">{{wallet._serverData.bankcard.name}}</div>
+			<div class="col">{{wallet._serverData.bankcard.num}}</div>
+		</div>
+		<div class="row">
+			<div class="col">{{wallet._serverData.bankcard.bank}}</div>
+			<div class="col"><button class="button  button-balanced button-small"   ng-click="withDraw()" >提现</button></div>
+		</div>
+	</div>
+
+
+	<div class="card" ng-if="withdraw.length == 0">
+  		<div class="item item-divider">提现记录</div>
+
+  		<div class="row" style="text-align:center;" >
+  			<div class="col" >无提现记录</div>
+  			<div class="col"></div>
+  			<div class="col"></div>
+		</div>	
+
+	</div>
+
+
+	<div class="card" ng-if="withdraw.length > 0">
+  		<div class="item item-divider">提现记录</div>
+
+  		<div class="row" ng-repeat="wd in withdraw" style="text-align:center;">
+  			<div class="col" >提现</div>
+  			<div class="col">{{wd.createdAt.toRelativeTime()}}前</div>
+  			<div class="col">{{wd._serverData.status}}</div>
+  			<div class="col" style="color:#ff0000">￥{{wd._serverData.withdraw_mount}}</div>
+		</div>	
+
+	</div>
+	</ion-content>
+</ion-view>

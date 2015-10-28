@@ -1,0 +1,22 @@
+<div class="modal">
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="regionModal.hide()">关闭</button>
+	  <div class="h1 title">选择地区</div>
+	  <button class="button button-balanced" ng-click="saveRegion()">保存</button>
+	</div>
+    <ion-content>
+    <br>
+    <br>
+      <div class="item item-divider">请选择您公司所属地区(可多选)</div>
+      <div class="list">
+        
+        <ion-checkbox ng-repeat="item in region"
+                      ng-model="item.checked" 
+                      ng-checked="item.checked">
+          {{ item.text }}
+        </ion-checkbox>
+        
+    </div>
+</ion-content>
+
+</div>

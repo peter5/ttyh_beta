@@ -1,0 +1,43 @@
+<ion-view view-title="企业认证">
+    
+	<ion-content>
+	<p></p>
+	<span ng-if="!authStatus">&nbsp;&nbsp;&nbsp;&nbsp;企业需认证审核通过后才可发布职位</span>
+    <span ng-if="authStatus">&nbsp;&nbsp;&nbsp;&nbsp;您已经通过了企业认证,可以发布职位了！</span>
+	<p></p>
+    <div class="item item-divider" ng-if="!authStatus">请上传营业执照	
+          <input type='file' id="yyzz" /></div>
+    <div class="item item-divider" ng-if="authStatus">营业执照 </div>
+           
+    <div class="item">
+        <img id="img_yyzz" style="width:100%" src="{{rzparams.yyzz}}">
+    </div>
+
+    <div class="item item-divider" ng-if="!authStatus">请上传手持身份证照片	
+          <input type='file' id="sfz" /></div>
+    <div class="item item-divider" ng-if="authStatus">手持身份证照片</div>
+           
+    <div class="item">
+        <img id="img_sfz" style="width:100%" src="{{rzparams.sfz}}">
+    </div> 
+
+
+    <label class="item item-input" >
+        <span class="input-label">负责人</span>
+        <input ng-model="rzparams.contact" type="text" class="text-right" >
+    </label>
+
+    <label class="item item-input" >
+        <span class="input-label">联系电话</span>
+        <input ng-model="rzparams.contact_num" type="text" class="text-right" >
+    </label>
+
+    <label class="item item-input" >
+        <span class="input-label">职位</span>
+        <input ng-model="rzparams.position" type="text" class="text-right" >
+    </label>
+
+    <button class="button button-block button-balanced" style="width:90%;margin-left:auto;margin-right:auto;" ng-click="requireAuth()" ng-if="!authStatus">提交审核</button>    
+
+	</ion-content>
+</ion-view>

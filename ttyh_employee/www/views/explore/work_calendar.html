@@ -1,0 +1,19 @@
+<div class="modal">
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="calendarModal.hide()">关闭</button>
+	  <div class="h1 title">工作日历</div>
+	</div>
+    <ion-content>
+    <br>
+    <br>
+        <flex-calendar options="options" events="events"></flex-calendar>
+
+
+      <label class="item item-input" style="padding-right:26px" ng-repeat="job in jobs">
+        <span class="input-label">{{job._serverData.job._serverData.title}}<span>
+          <p>{{job._serverData.job._serverData.work_day_str}}</p>
+
+      </label>
+    </ion-content>
+
+</div>

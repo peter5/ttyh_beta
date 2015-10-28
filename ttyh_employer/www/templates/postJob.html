@@ -1,0 +1,130 @@
+<ion-view view-title="发布职位">
+  
+	<ion-content>
+
+		<div class="list">
+			<div class="item item-divider">请详细填写以下内容</div>
+
+
+
+			<label class="item item-input" >
+				<span class="input-label">职位名称</span>
+                <input placeholder="4-50个字" ng-model="jobParams.title" type="text" class="text-right" >
+			</label>
+
+            <label class="item item-input item-select">
+                <span class="input-label">所属类别</span>
+                <select ng-model="jobParams.work_type">
+                    <option selected>{{jobParams.work_type}}</option>
+                    <option ng-repeat="y in work_type" value="{{y}}">{{y}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input " >
+                <span class="input-label">招聘人数</span>
+                <input ng-model="jobParams.recruit_num" type="text" class="text-right" >
+            </label>
+
+
+
+            
+                <a class="item" ng-click="dateSelectModal.show()">
+                    工作日期
+                    <span class="item-note">
+                      {{dateStr}}
+                    </span>
+                </a>
+            
+                <a class="item" ng-click="timePickerModal.show()">
+                    工作时间
+                    <span class="item-note">
+                      {{jobParams.work_hour}}
+                    </span>
+                </a>
+
+
+
+
+                <a class="item" ng-click="regionModal.show()">
+                    所在地区
+                    <span class="item-note">
+                      {{regionStr}}
+                    </span>
+                </a>
+
+            <label class="item item-input" >
+                <span class="input-label">详细地址</span>
+                <input placeholder="请输入工作所在地址" ng-model="jobParams.work_location" type="text" class="text-right" >
+            </label>
+
+            <label class="item item-input item-select">
+                <span class="input-label">计费方式</span>
+                <select ng-model="jobParams.pay_unit">
+                    <option selected>{{jobParams.pay_unit}}</option>
+                    <option ng-repeat="r in pay_unit" value="{{r}}">{{r}}</option>
+                </select>
+            </label> 
+
+            <label class="item item-input" >
+                <span class="input-label">工资</span>
+                <input placeholder="根据计费方式输入工资数量" ng-model="jobParams.pay_qty" type="text" class="text-right" >
+            </label> 
+
+            <label class="item item-input item-select">
+                <span class="input-label">结算周期</span>
+                <select ng-model="jobParams.pay_type">
+                    <option selected>{{jobParams.pay_type}}</option>
+                    <option ng-repeat="r in pay_type" value="{{r}}">{{r}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select">
+                <span class="input-label">性别需求</span>
+                <select ng-model="jobParams.gender_requirement">
+                    <option selected>{{jobParams.gender_requirement}}</option>
+                    <option ng-repeat="r in gender_requirement" value="{{r}}">{{r}}</option>
+                </select>
+            </label> 
+
+            <label class="item item-input" >
+                <span class="input-label">特殊需求</span>
+                <input placeholder="如：需要健康证" ng-model="jobParams.special_requirement" type="text" class="text-right" >
+            </label>
+
+
+            <label class="item item-input" >
+                <span class="input-label">联系人</span>
+                <input ng-model="jobParams.contact" type="text" class="text-right" >
+            </label>
+
+            <label class="item item-input" >
+                <span class="input-label">联系电话</span>
+                <input  ng-model="jobParams.contact_num" type="text" class="text-right" >
+            </label>
+
+            <div class="item item-divider">职位介绍</div>
+            <label class="item item-input">
+                <textarea placeholder="" ng-model="jobParams.work_desc" rows="5" class="content"></textarea>
+            </label>
+
+            <div class="item item-divider">工作内容</div>
+            <label class="item item-input">
+                <textarea placeholder="" ng-model="jobParams.work_content" rows="5" class="content"></textarea>
+            </label> 
+
+            <div class="item item-divider">人员要求</div>
+            <label class="item item-input">
+                <textarea placeholder="" ng-model="jobParams.recruit_requirement" rows="5" class="content"></textarea>
+            </label>
+
+            <div class="item item-divider">薪资规则</div>
+            <label class="item item-input">
+                <textarea placeholder="" ng-model="jobParams.pay_rule" rows="5" class="content"></textarea>
+            </label>
+
+
+		</div>
+
+        <button class="button button-block button-balanced" style="width:90%;margin-left:auto;margin-right:auto;" ng-click="postJob()">发布职位</button>
+	</ion-content>
+</ion-view>

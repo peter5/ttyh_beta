@@ -1,0 +1,32 @@
+<div class="modal">
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="createGroupModal.hide()" style="border-color:#ffffff;">关闭</button>
+	  <div class="h1 title">我要建团</div>
+	  <button class="button button-balanced" ng-click="createGroup()" style="border-color:#ffffff;">创建</button>
+	</div>
+    <ion-content>
+    <br>
+    <br>
+      <div class="item item-divider"></div>
+      <label class="item item-input" >
+          <span class="input-label">团队名称</span>
+          <input ng-model="createGroupParams.name" type="text" class="text-right" >
+      </label>
+
+      <div class="item item-divider"></div>
+      <label class="item item-input" >
+          <span class="input-label">成团人数</span>
+          <input ng-model="createGroupParams.num" type="text" class="text-right" >
+      </label>
+      <div style="margin-left:22%;width:75%;font-size:12px;background:#ffffff;border:none;margin-top:2px;_height:200%;">最低要求5人，最高暂无限制，弱团长多次未招满，则可能被取消建团资格，请根据实际情况来进行设置。</div>
+
+
+      <div class="item item-divider"></div>
+      <label class="item item-input" >
+          <span class="input-label">成团佣金<span style="margin-left:25px;color:#FF0000">预估最高为￥{{createGroupParams.num * rewardPerPerson}}.00</span></span>
+
+      </label>
+      <div style="margin-left:22%;width:75%;font-size:12px;background:#ffffff;border:none;margin-top:2px;_height:200%;">预估最高仅为理论值，实际因您的团员实际工作天数而变化</div>
+</ion-content>
+
+</div>

@@ -1,0 +1,43 @@
+
+<ion-view view-title="职位列表">
+	
+	<ion-nav-buttons side="right">
+        <a class="button" href="#/tab/postJobs/postJob" style="border-color:#ffffff;">发布职位</a>
+    </ion-nav-buttons> 
+	<ion-content class="has-tabs has-header">
+		<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+  		
+
+		<ion-list class="jobs" >
+          <div class="item item-divider">共{{jobs.length}}个职位</div>
+      		<ion-item collection-repeat="job in jobs"  collection-item-width="'100%'" collection-item-height="120px" >
+      		<div class="item-avatar" ng-click="showDetail(job._serverData.job.id)">
+      		<img src="../img/{{job._serverData.job._serverData.work_type}}.png">
+      		<h2>{{job._serverData.job._serverData.title}}</h2>
+      		<p>{{job._serverData.job._serverData.pay_qty}}{{job._serverData.job._serverData.pay_unit}}&nbsp;&nbsp;&nbsp;{{job._serverData.job._serverData.pay_type}}&nbsp;&nbsp;&nbsp;招{{job._serverData.recruit_num}}人</p>
+      		<p>{{job._serverData.job.createdAt.toRelativeTime()}}前发布</p>
+      	 </div>
+
+        <div class="row">
+
+            <div class="col" style="text-align:center;background-color:#33cd5f;color:#ffffff;" ng-click="start(job)" ng-if="job._serverData.status == 'waiting'">待开工</div>
+            <div class="col" style="text-align:center;background-color:#b2b2b2;color:#ffffff;" ng-if="job._serverData.status == 'processing'">已开工</div>
+            &nbsp;
+
+            <div class="col" style="text-align:center;background-color:#b2b2b2;color:#ffffff;"  ng-if="job._serverData.status == 'completed'">已完工</div>
+            <div class="col" style="text-align:center;background-color:#33cd5f;color:#ffffff;" ng-click="finish(job)" ng-if="job._serverData.status == 'processing'">待完工</div>           
+
+
+            &nbsp;
+
+            <div class="col" style="text-align:center;background-color:#33cd5f;color:#ffffff;" ng-click="stop(job)" ng-if="job._serverData.status == 'waiting'">停止招聘</div>
+            <div class="col" style="text-align:center;background-color:#33cd5f;color:#ffffff;" ng-if="job._serverData.status == 'stopped'">已停止招聘</div>
+
+        </div>
+
+			</ion-item>
+		</ion-list>
+
+
+	</ion-content>
+</ion-view>

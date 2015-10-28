@@ -1,0 +1,48 @@
+<ion-view view-title="我">
+	<ion-content class="setting">
+		<!-- cell section gap -->
+		<ion-item class="item-divider item-gap"></ion-item>
+		<!-- login cell 没有登录 -->
+		<ion-item class="login" on-hold="onHoldLogin()" ng-click="loginModal.show()" ng-if="!loginName">
+			<img src="img/commentfailure.png" class="avatar" style=" clear:both;display:block;margin:auto;">
+			<br>
+
+
+			<p ng-if="!processing" style="text-align: center;">立即登录</p>
+			<ion-spinner icon="ripple" ng-if="processing"></ion-spinner>
+		</ion-item>
+		<!-- login cell 已登录 -->
+		<ion-item class="my_info" ng-if="loginName" href="#/tab/my/resume">
+		    <dl>
+		      <dt>{{currentUser._serverData.realname}}</span></dt>
+		      <dd><span>{{currentUser._serverData.gender}}</span><span></span><span>{{currentUser._serverData.birthyear}}</span></dd>
+		      <dd><span>{{currentUser._serverData.region}}</span><span></span></dd>
+		      <dd><span>工号：{{inviteCode}}</span></dd>
+		      	<dd><span style="font-size:12px;">(工号是用户的唯一标识，可用于邀请工友)</span></dd>
+		    </dl>
+
+
+			<i class="arrow">
+		</ion-item>
+			
+			
+
+		<ion-item class="item-divider item-gap"></ion-item>
+		
+<!-- 		<ion-item class="my_list" href="#/tab/my/renzheng"><i class="icon icon_grrz"></i><span>个人认证</span><i class="state"></i><i class="arrow"></i></ion-item>
+		<ion-item class="my_list" href="#/tab/my/money"><i class="icon icon_qb"></i><span>钱包</span><i class="arrow"></i></ion-item>
+		<ion-item class="my_list" href="#/tab/my/renzheng"><i class="icon icon_xiaoxi"></i><span>消息</span><span class="badge badge-assertive">3</span><i class="arrow"></i></ion-item> -->
+		<ion-item class="my_list" href="#/tab/my/invite"><i class="icon icon_yaoqing" ></i><span>邀请朋友</span><i class="arrow" ></i></ion-item>
+		<ion-item class="my_list" href="#/tab/my/guide"><i class="icon icon_zhinan" ></i><span>用户指南</span><i class="arrow"></i></ion-item>
+		<ion-item class="my_list" href="#/tab/my/wallet"><i class="icon icon_qb" ></i><span>我的钱包</span><i class="arrow"></i></ion-item>
+		
+		<button class="button button-block button-assertive" style="width:90%;margin-left:auto;margin-right:auto;" ng-click="logout()" ng-if="loginName">退出当前账户</button>
+		
+			
+		<br>
+		<div id="copyright" style="text-align: center;">
+      		&copy; {{now | date:'yyyy'}} 天天有活
+		</div>
+
+	</ion-content>
+</ion-view>

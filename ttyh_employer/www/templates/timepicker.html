@@ -1,0 +1,36 @@
+<div class="modal">
+	<ion-header-bar>
+	<div class="bar bar-header">
+	  
+	  <div class="h1 title">选择工作日期</div>
+	  <button class="button button-balanced" ng-click="saveTimePicked()">保存</button>
+	  <!-- <button class="button button-balanced" ng-click="saveDatePicked()">保存</button> -->
+	</div>
+	</ion-header-bar>
+
+	<ion-content >
+	
+		<div class="list" >
+			<ionic-timepicker input-obj="timePickerObject">
+			<a class="item" >
+			    开工日期
+			    <span class="item-note">
+			      {{startTime}}
+			    </span>
+			</a>
+			</ionic-timepicker>
+		
+			<ionic-timepicker input-obj="timePickerObject_end">
+			<a class="item " >
+			   
+			    完工日期
+			    <span class="item-note">
+			      {{endTime}}
+			    </span>
+			</a>
+			</ionic-timepicker>
+		</div>
+
+
+    </ion-content>
+</div>

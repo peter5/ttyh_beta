@@ -1,0 +1,61 @@
+<ion-view view-title='职位详情' cache-view='false'>
+<!--             <ion-nav-buttons side="right" >
+                <button class="button icon ion-navicon" ng-click="share()"></button>
+            </ion-nav-buttons> -->
+    <ion-content class="has-tabs has-header" >
+
+
+        <div class="container">
+            <ul class="job_info">
+                <li>
+                    <dl class="job_info_base">
+                        <dt class="size_15">{{job.title}}</dt>
+                        <dd class="job_info2"><span class="f16r"><i class="f21">{{job.pay_qty}}</i>{{job.pay_unit}}</span><span>{{job.work_type}}</span></dd>
+                        <dd class="job_info2"><span>{{job.work_day_str}}</span><span style="margin-left:10px;color:#33cd5f">{{job.view_count}}次浏览</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="jobitem"><span class="info_field size_15">招聘人数</span> <span class="info_text">{{job.recruit_num}}</span> </div>
+                    <div class="jobitem">
+                        <span class="info_field size_15">工作日期</span> <span class="info_text ">{{job.work_day_str}}</span>
+   
+                    </div>
+                    <div class="jobitem"><span class="info_field size_15">工作时间</span> <span class="info_text">{{job.work_hour}}</span></div>
+                    <div class="jobitem"><span class="info_field size_15">工作地点</span> <span class="info_text city">{{job.work_location}}</span> </div>
+                    <div class="jobitem"><span class="info_field size_15">结算方式</span> <span class="info_text">{{job.pay_type}}</span> </div>
+                    <div class="jobitem"><span class="info_field size_15">特殊要求</span> <span class="info_text">{{job.special_requirement}}</span> </div>
+                    </dl>
+                </li>
+                <p class="size_15">工作描述</p>
+                <li>
+                    <span class="info_text" ng-if="job.work_desc.length > 0">【职位介绍】：{{job.work_desc}}</span>
+                    <span class="info_text" ng-if="job.work_content.length > 0">【工作内容】：{{job.work_content}}</span>
+                    <span class="info_text" ng-if="job.recruit_requirement.length > 0">【人员要求】：{{job.recruit_requirement}}</span>
+                    <span class="info_text" ng-if="job.pay_rule.length > 0">【薪资规则】：{{job.pay_rule}}</span>
+
+                </li>
+                <p class="size_15">招聘方</p>
+                    <li>
+                        <dl class="companyinfo">
+                            <dt>{{job.company}}<em class="icon_rz"></em></dt>
+                        </dl>
+                    </li>
+    
+                <p class="size_15">求职须知</p>
+                <li>
+                    <div class="qzxz">【为保障您的权益，请通过在线报名方式报名。需要缴纳费用等情况请注意识别真假，如发现有问题请向我们举报！】举报电话：<a href="tel:010-82447328">010-82447328</a>。</div>
+                </li>
+            </ul>
+        </div>
+
+      
+        <div class="button-bar" style="width:90%;margin-left:auto;margin-right:auto;">
+          <button class="button  button-balanced"   ng-click="applyJob()">立即申请</button>
+          <button class="button  button-balanced"   ng-click="applyGroup()" ng-if="response._serverData.groupReward">组团申请</button>
+
+ 
+        </div>
+  </ion-content>  
+
+
+</ion-view>

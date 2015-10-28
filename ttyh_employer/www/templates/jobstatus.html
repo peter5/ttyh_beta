@@ -1,0 +1,35 @@
+<ion-view view-title="{{tabName}}">
+	
+ 
+	<ion-content class="has-tabs has-header">
+		
+  		
+
+		<ion-list class="jobs" >
+      		<ion-item collection-repeat="info in mat" collection-item-width="'100%'" collection-item-height="75px">
+      		<div ng-if="tabName == '新申请'" >
+              <span>{{info._serverData.user._serverData.realname}}</span><span style="font-size:12px;">&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.gender}}&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.birthyear}}</span><span style="margin-left:10px;color:#ff0000" ng-if="info._serverData.is_command">团长</span><br>
+              <span style="font-size:12px;">{{info._serverData.user._serverData.username}}&nbsp;&nbsp;&nbsp;{{info.createdAt.toRelativeTime()}}前申请</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button-small button-balanced" ng-click="luyong(info)">&nbsp;&nbsp;录用&nbsp;&nbsp;</button>&nbsp;&nbsp;&nbsp;
+			        <button class="button button-small button-assertive" ng-click="jujue(info)">&nbsp;&nbsp;拒绝&nbsp;&nbsp;</button> 
+      	  </div>
+
+      		<div ng-if="tabName == '已录用'">
+              <h2>{{info._serverData.user._serverData.realName}}&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.gender}}&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.birthyear}}</h2>
+              <span style="font-size:12px;">{{info._serverData.user._serverData.username}}&nbsp;&nbsp;&nbsp;{{info.createdAt.toRelativeTime()}}前申请 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已录用</span>
+      	  	</div>
+
+      		<div ng-if="tabName == '已拒绝'">
+              <h2>{{info._serverData.user._serverData.realName}}&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.gender}}&nbsp;&nbsp;&nbsp;{{info._serverData.user._serverData.birthyear}}</h2>
+              <span style="font-size:12px;">{{info._serverData.user._serverData.username}}&nbsp;&nbsp;&nbsp;{{info.createdAt.toRelativeTime()}}前申请 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已拒绝</span>
+      	  </div>     	  	
+
+
+
+
+			</ion-item>
+		</ion-list>
+
+
+	</ion-content>
+</ion-view>

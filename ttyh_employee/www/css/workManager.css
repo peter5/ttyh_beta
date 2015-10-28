@@ -1,0 +1,845 @@
+@charset "utf-8";
+/*工作管理*/
+.h_right{
+	font-weight: normal;
+	font-size: 16px;
+	right: 10px;
+	position: fixed;
+	display: inline-block;	
+}
+.work_list{
+	
+	
+}
+.work_list .work_state{
+	border-bottom:1px solid #f1f1f1;
+	padding:15px;
+}
+.work_list .work_state dt{
+	color:#444444;
+	font-size:16px;
+}
+.work_list .work_state dd{
+	line-height:22px;
+}
+.work_list .work_state .money{
+	color:#a6a6a6;
+}
+.work_list .work_state .statename{
+	color: #4cc2a0;
+	font-size: 16px;
+	position: absolute;
+	right: 15px;
+}
+
+.work_list .work_state .address{
+	color:#a6a6a6;
+}
+.work_list .work_state .time{
+	color:#a6a6a6;
+	margin-left:10px;
+}
+
+.work_list .yingpin, .work_list .daimianshi, .work_list .yiwangong{
+	background-color:#fff;	
+}
+/*应聘中/待面试/已完工*/
+.work_list .gongzuozhong, .work_list .mianshiyaoqing{
+	background-color:#f5f9fe;
+}
+/*工作中/面试邀请*/
+.work_list .gongzuozhong .money , .work_list .mianshiyaoqing .money{
+	color:#4cc2a0 !important;	
+}
+.work_list .gongzuozhong  dt i , .work_list .mianshiyaoqing dt i{
+	width:10px;
+	height:10px;
+	display:inline-block;
+	background-color:#5e9be4;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	margin-right:4px;
+}
+.remark_msg{
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 15px 0 15px 0px;
+}
+.remark_msg .remark_msg_con{
+	display: inline-block;
+	margin-left: 15px;
+	color:#5E9BE4;
+	margin-right: 15px;
+	word-break: break-all;
+	white-space: pre-wrap;
+	text-justify: auto;
+	text-align: justify;
+	overflow: hidden;
+}
+/*无效*/
+.work_list .invalid{
+	background-color:#fff;	
+}
+.work_list .invalid .statename{
+	color: #e37173;
+	font-size: 16px;
+	position: absolute;
+	right: 15px;
+}
+
+/*应聘详情*/
+.work_info{
+	border-bottom:1px solid #f1f1f1;
+	padding:15px;
+	background-color:#fff;
+}
+.work_info dt{
+	color:#444444;
+	font-size:16px;
+}
+.work_info dd{
+	line-height:22px;
+}
+
+.work_info .money{
+	color:#e37173;
+	margin-right:10px;
+}
+.work_info .money i{
+	font-size:19px;
+}
+.work_info .type, .work_info .company, .work_info .address, .work_info .time {
+	color:#a6a6a6;
+	margin-right:10px;
+}
+.work_info .yinpingaddress{
+	display: inline-block;
+	color:#5e9be4;
+  	/*width: 210px;*/
+}
+.work_info .showjob{
+	color: #4cc2a0;
+	position: absolute;
+	right: 20px;
+}
+.work_info .showjob i{
+	width: 7px;
+	height: 7px;
+	border-top: 2px solid #a6a6a6;
+	border-right: 2px solid #a6a6a6;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	display: inline-block;
+}
+
+
+/*状态*/
+.work_state_info{
+	background-color:#fff;
+	border-top:1px solid #f1f1f1;
+	border-bottom:1px solid #f1f1f1;
+	padding:15px 0 15px 15px;
+	
+}
+.work_state_info .state_icon{
+	float:left;
+	background-color:red;
+	display:inline-table;
+	width:40px;
+	height:40px;
+}
+.work_state_info .icon_work_1 {
+	background:url(../img/1.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .icon_work_2 {
+	background:url(../img/2.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .icon_work_3 {
+	background:url(../img/3.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .icon_work_4 {
+	background:url(../img/4.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .icon_work_5 {
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-work-5.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .icon_work_6 {
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-work-6.png) no-repeat;
+	background-size:contain;
+}
+.work_state_info .state_describe{
+	/*margin-left:60px;
+	margin-top:5px;*/
+	margin: 5px 10px 0 60px;
+	position:relative;
+}
+.work_state_info .state_describe h1{
+	color:#4cc2a0;
+	font-size:16px;
+}
+.work_state_info .notstate  h1{
+	color:#e37173 !important;
+	font-size:16px;
+}
+.work_state_info .state_describe span{
+	color:#9b9b9b;
+}
+.work_state_info .state_describe span.black{
+	color:#181818;
+}
+.work_state_info .state_describe span a{
+	text-decoration: underline;
+}
+
+
+.work_state_info .state_describe .describe_left{
+	margin-right:90px;
+	min-height: 60px;
+}
+
+
+.work_state_info .state_describe .remark_msg_con{
+	display: inline-block;
+	color:#5E9BE4;
+	word-break: break-all;
+	white-space: pre-wrap;
+	text-justify: auto;
+	text-align: justify;
+	overflow: hidden;
+}
+
+.work_state_info .state_describe .edit_operatioin{
+	/* float: right; */
+	width: 80px;
+	/* height: 60px; */
+	/* margin-top: -35px; */
+	border-left: 1px solid #f1f1f1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	/*height: 100%;*/
+}
+.edit_operatioin a{
+	font-size:16px;
+	color:#181818 !important;
+	display:block;
+}
+.edit_operatioin .edit_icon{
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-pingjia.png) no-repeat;
+	background-size:contain;
+	height: 20px;
+	width: 20px;
+	margin: 10px auto 6px;
+}
+
+.edit_operatioin p{
+	text-align:center;
+	font-size:16px;
+}
+.infotitle{
+	/*margin: 15px 0 10px 15px;*/
+	margin: 10px 0 5px 15px;
+	font-size: 16px;	
+}
+.process_list{
+	background-color:#fff;
+	border-top:1px solid #f1f1f1;
+	border-bottom:1px solid #f1f1f1;
+	padding-left:35px;
+}
+.process_list li{
+	border-left:1px solid #f1f1f1;
+	padding:10px 0 0 40px;
+	position:relative;
+}
+.process_list li .title{
+	color:#a6a6a6;
+	font-size:15px;
+	line-height:30px
+}
+.process_list li .datetime{
+	color:#a6a6a6;
+	font-size:13px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.process_list li span{
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #a6a6a6;
+	position: absolute;
+	left: -5px;
+	top: 22px;
+	display: block;
+	z-index: 10;
+}
+.process_list li:first-child .title{
+	color:#4cc2a0;
+}
+.process_list li:first-child .datetime{
+	color:#4cc2a0;
+}
+.process_list li:first-child span{
+	width: 14px;
+	height: 14px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #4cc2a0;
+	position: absolute;
+	left: -10px;
+	top: 18px;
+	display: block;
+	border: 2px solid #e0f6f0;
+	z-index: 10;
+}
+.process_list li:last-child .datetime{
+	border-bottom:none;	
+}
+
+/*待面试信息*/
+.daimianshi_info{
+	border-top:1px dashed #f1f1f1;
+	margin-top:10px;
+	padding:10px 10px 0 0;
+	color:#a6a6a6;
+}
+/*面试邀请攸 */
+.mianshiyaoqing_info{
+	border-top:1px dashed #f1f1f1;
+	margin-top:10px;
+	padding:10px 10px 0 0;
+	color:#a6a6a6;
+}
+.mianshiyaoqing_info .fangqi{
+	color: #fff;
+	background-color: #e37173;
+	width: 100px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+}
+.mianshiyaoqing_info .jieshou{
+	color:#fff;
+	background-color:#4cc2a0;
+	width: 100px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+	margin-left:10px;
+	
+}
+.mianshiyaoqing_info .countdown{
+	border: 1px solid #e37173;
+	margin-top: 10px;
+	width: 205px;
+	height: 29px;
+	text-align: center;
+	line-height: 30px;
+	color: #e37173;
+	font-size: 20px;
+	font-weight: 800;
+}
+.mianshiyaoqing_info .prompt{
+	color: #e37173;
+	margin-top: 10px;
+}
+/*共用的样式*/
+.icon_rz{
+	background:url(../img/rz.png) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	margin-left: 5px;
+	position: relative;
+	top: 4px;
+}
+/*日历的样式*/
+@charset "utf-8";
+.workDatepicker .pop_conent{
+	/*height:394px;*/
+}
+.workDatepicker .pop_table{
+	width:100%;
+}
+.workDatepicker .pop_table thead th{
+	background-color:#fff !important;
+}
+.workDatepicker .pop_table thead tr.seldate{
+	border-bottom:1px solid #e5e6e7;	
+}
+.workDatepicker .pop_table thead tr.seldate th{
+	border-bottom:1px solid #e5e6e7;	
+	border-radius:0px;
+}
+.workDatepicker .pop_table .prev span{
+	width:30px;
+	height:30px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display:inline-block;
+}
+.workDatepicker .pop_table .prev span i{
+	width: 10px;
+	height: 10px;
+	margin: 9px;
+	display: block;
+	line-height: 50px;
+	text-indent: 80px;
+	overflow: hidden;
+	border-left: 2px solid #bebebe;
+	border-bottom: 2px solid #bebebe;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.workDatepicker .pop_table .next span{
+	width:30px;
+	height:30px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display:inline-block;
+}
+.workDatepicker .pop_table .next span i{
+	width: 10px;
+	height: 10px;
+	margin: 8px;
+	display: block;
+	line-height: 50px;
+	text-indent: 80px;
+	overflow: hidden;
+	border-right: 2px solid #bebebe;
+	border-top: 2px solid #bebebe;
+	-webkit-transform: rotate(45deg);
+}
+
+.workDatepicker .pop_table tr th,.workDatepicker .pop_table tr td {
+    text-align: center;
+    width: 26px;
+    height: 27px;
+    border-radius: 4px;
+    border: medium none;
+    padding:5px;
+	line-height:27px;
+}
+.workDatepicker .pop_table tr td i{
+	width: 20px;
+	height: 26px;
+	display: inline-block;
+	border-radius: 50%;
+	font-size:18px;
+}
+.workDatepicker .pop_conent .tip{
+	color:#9b9b9b;
+	margin:15px 0 15px 15px;
+	display: block;
+}
+.workDatepicker .pop_conent .tip a{
+	color:#5e9be4;
+	text-decoration: underline;
+	
+}
+.workDatepicker .dow{
+	font-size: 14px;
+	font-weight: 400 !important;
+}
+/*选中*/
+.workDatepicker .pop_table tr td i.currday{
+	/*color:#e33b0d;*/
+	border-bottom:2px solid #e33b0d;
+	border-radius:0px;
+}
+.workDatepicker .pop_table tr td i.notsel{
+	color:#ccc !important;
+}
+.workDatepicker .pop_table tr td i.notsel em{
+	width:6px;
+	height:6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: block;
+	background-color: #ccc !important;
+	position: absolute;
+	left: 19px;
+	bottom: 2px;
+}
+
+.workDatepicker .pop_table tr td i.selwork em{
+	width:6px;
+	height:6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: block;
+	background-color: #4cc2a0;
+	position: absolute;
+	left: 19px;
+	bottom: 2px;
+}
+.workDatepicker .pop_table tr td i.selwork{
+	color: #4cc2a0;
+}
+/*左半圆*/
+
+.workDatepicker .pop_table tr td i.leftradius{
+	background-color:#03C;
+}
+/*右半圆*/
+.workDatepicker .pop_table tr td i.rightradius{
+	background-color:#03C;
+}
+
+.workDatepicker .pop_table .data_cont {
+    text-align: center;
+    width: 210px;
+    height: 30px;
+    border-radius: 4px;
+    border: medium none;
+}
+.workDatepicker .pop_table .data_cont .datepicker_month {
+    width: 50px;
+    border:0;
+    text-align: right;
+}
+.workDatepicker .pop_table .data_cont .datepicker_year {
+	margin-left:0px;
+/* 	margin-left:30px; */
+    width: 60px;
+    border:0;
+    text-align: right;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .prevday,.workDatepicker .pop_table .workDatepicker_tbody .nextday{
+	color:#ccc;
+}
+.workDatepicker .pop_table .workDatepicker_tbody td{
+	background-color:#fbfbfb;
+	border:1px solid #fff;
+	position:relative;
+}
+.workDatepicker .pop_table .workDatepicker_tbody span{
+	width: 6px;
+	height: 6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #4cc2a0;
+	position: absolute;
+	left: 42%;
+	top: 29px;
+	display: block;
+	border: 2px solid #e0f6f0;
+	z-index: 10;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .todayClassSpan{
+	width: 26px;
+  	height: 26px;
+  	top: 0;
+  	margin-top: 2px;
+  	left: 50%;
+  	margin-left: -16px;
+  	color: #fff;
+  	font-size: 10px;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-0{
+	color:#4cc2a0;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-1{
+	background-image :url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-signin-1.png);
+	background-repeat :no-repeat;
+	background-size: 25px 25px;
+  	background-position-x: 100%;
+  	color:#4cc2a0;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-2{
+	background-image :url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-signin-2.png);
+	background-repeat :no-repeat;
+	background-size: 25px 25px;
+  	background-position-x: 100%;
+  	color:#4cc2a0;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-3{
+	background-image :url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-signin-3.png);
+	background-repeat :no-repeat;
+	background-size: 25px 25px;
+  	background-position-x: 100%;
+  	color:#4cc2a0;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-4{
+	background-image :url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-signin-4.png);
+	background-repeat :no-repeat;
+	background-size: 25px 25px;
+  	background-position-x: 100%;
+  	color:#4cc2a0;
+}
+.workDatepicker .pop_table .workDatepicker_tbody .icon-signin-5{
+	background-image :url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-signin-5.png);
+	background-repeat :no-repeat;
+	background-size: 25px 25px;
+  	background-position-x: 100%;
+  	color:#4cc2a0;
+}
+
+/*签到*/
+.qiandao_list{
+	position:relative;
+}
+.qd_btn{
+	margin:50px auto 30px;
+	width: 200px;
+	position: relative;	
+}
+.qd_btn .bg1{
+	margin: 0 auto;
+	width: 120px;
+	height: 120px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(76,194,160,1);
+}
+.qd_btn .bg2{
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(76,194,160,.5);
+	margin-top: -130px;
+}
+.qd_btn .bg3{
+	margin: 0 auto;
+	width: 160px;
+	height: 160px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(76,194,160,.2);
+	margin-top: -150px;
+}
+
+/* 未签到 */
+.qd_btn_no{
+	margin:50px auto 30px;
+	width: 200px;
+	position: relative;	
+}
+.qd_btn_no .bg1{
+	margin: 0 auto;
+	width: 120px;
+	height: 120px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(220,221,222,1);
+}
+.qd_btn_no .bg2{
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(220,221,222,.5);
+	margin-top: -130px;
+}
+.qd_btn_no .bg3{
+	margin: 0 auto;
+	width: 160px;
+	height: 160px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(220,221,222,.2);
+	margin-top: -150px;
+}
+.bg3 .qd_btn_sb{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-my-qd-sb.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	display: block;
+	background-size: contain;
+	margin: 30px 50%;
+	left: -15px;
+}
+.bg3 .qd_btn_xb{
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-my-qd-xb.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	display: block;
+	background-size: contain;
+	margin: 30px 50%;
+	left: -15px;
+}
+.bg3 .qd_btn_txt{
+	position: absolute;
+	text-align: center;
+	margin: 70px 50%;
+	left: -40px;
+	width: 80px;
+	color:#fff;
+	font-size:18px;
+}
+.bgh20{
+	height:20px;
+	background-color:#fff;	
+}
+
+/*签到的明细*/
+.qiandao_list .qd_info{
+	margin: 20px auto;
+	width: 260px;
+	text-align: center;
+}
+.qd_info .qd_title{
+	color:#181818;
+}
+.qd_info .qd_time{
+	color:#181818;
+	font-size:24px;
+	margin-top: 10px;
+}
+.qd_info .qd_date{
+	color:#a6a6a6;
+	
+}
+.qd_info .qd_address_icon{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-my-qd-address.png) no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 18px;
+	margin: 8px auto 4px;
+}
+.qd_info .qd_address{
+	color:#a6a6a6;
+}
+.qd_tip{
+	color: #4cc2a0;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 20px;
+}
+.edit_operatioin .edit_icon_ok{
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-pingjia_ok.png) no-repeat;
+	background-size:contain;
+	height: 20px;
+	width: 20px;
+	margin: 10px auto 6px;
+}
+
+/*评价*/
+.pj_info{
+	margin-top:20px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+
+	
+}
+.pj_info li{
+	-webkit-box-flex: 1;
+	-webkit-box-align: center;
+	text-align:center;
+}
+.pj_icon{
+	width: 60px;
+	height: 60px;
+	display: inline-block;	
+}
+.hp_notselect div{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-hp-notselect.png) no-repeat;
+	background-size: contain;
+}
+.zp_notselect div{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-zp-notselect.png) no-repeat;
+	background-size: contain;
+}
+.cp_notselect div{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-cp-notselect.png) no-repeat;
+	background-size: contain;
+}
+.hp_select{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-hp-select.png) no-repeat !important;
+	background-size: contain !important;
+}
+.zp_select{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-zp-select.png) no-repeat !important;
+	background-size: contain !important;
+}
+.cp_select{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-pl-cp-select.png) no-repeat !important;
+	background-size: contain !important;
+}
+
+.pjtext{
+	margin:20px 10px;
+}
+.pjtext textarea{
+	width:100%;
+	color:#a6a6a6;
+	background-color:#f8f9fa;
+}
+
+
+/*面试邀请攸 */
+.mianshiyaoqing_info span{
+	display:block;
+}
+.state_describe span{
+	display:block;	
+}
+.note{
+	color:#e37173 !important;	
+}
+.noteblue{
+	color:#5e9be4 !important;	
+}
+.state_describe .money{
+	color:#e37173
+}
+.state_describe .money i{
+	font-size:16px;	
+}
+.noteblue{
+	color:#5e9be4 !important;	
+}
+.state_describe .money{
+	color:#e37173
+}
+.state_describe .money i{
+	font-size:16px;	
+}
+/*.pjtext textarea::-webkit-input-placeholder { 
+    color:    #e37173;
+}
+.pjtext textarea::-moz-placeholder {
+    color:    #e37173;
+}
+.pjtext textarea::-moz-placeholder {
+    color:    #e37173;
+}
+.pjtext textarea::-ms-input-placeholder {
+    color:    #e37173;
+}*/

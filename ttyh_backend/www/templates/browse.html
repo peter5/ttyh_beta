@@ -1,0 +1,48 @@
+<ion-view view-title="提现处理">
+  <ion-content>
+
+  		<br>
+		<div class="button-bar"  style="width:94%;margin-left:auto;margin-right:auto;margin-bottom:10px;">
+            <button class="button  button-balanced button-small"   ng-click="underprocess()">未处理</button>
+            <button class="button  button-balanced button-small"   ng-click="processed()">已处理</button>
+ 		</div>
+
+ 		<li class="item"  ng-if="bar">未处理：{{withdraws.length}}</li>
+      	<li class="item"  ng-if="!bar">已处理：{{withdraws.length}}</li>
+
+
+      	<div class="card" ng-repeat="withdraw in withdraws">
+      	
+  			<div class="item item-button-right">
+				提现金额:<span style="color:#ff0000">￥{{withdraw._serverData.withdraw_mount}}</span>
+				<span style="margin-left:20px;font-size:12px;">{{withdraw.createdAt.toRelativeTime()}}前</span>
+				<button class="button button-balanced" ng-if="withdraw._serverData.status == '处理中'" ng-click="mark(withdraw)">
+  					<i class="icon ion-social-markdown" ></i>
+				</button>
+			</div>
+
+			<div class="list">
+				<a class="item item-icon-left">
+					<i class="icon ion-card"></i>
+					银行卡<span class="item-note">{{withdraw._serverData.wallet._serverData.bankcard.num}}</span>
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-person"></i>
+					收款人<span class="item-note">{{withdraw._serverData.wallet._serverData.bankcard.name}}</span>
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-ios-home"></i>
+					开户银行<span class="item-note">{{withdraw._serverData.wallet._serverData.bankcard.bank}} {{withdraw._serverData.wallet._serverData.bankcard.branch}}</span>
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-ios-telephone"></i>
+					联系电话<span class="item-note">{{withdraw._serverData.wallet._serverData.bankcard.contact}}</span>
+				</a>
+			</div>
+      		
+
+      	</div>
+
+
+  </ion-content>
+</ion-view>

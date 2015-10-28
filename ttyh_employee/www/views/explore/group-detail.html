@@ -1,0 +1,39 @@
+<ion-view view-title="详情">
+    <ion-content>
+    
+		<div class="container">
+        	<ul class="job_info">
+            	<li>
+                	<dl class="job_info_base">
+                    	<dt class="size_15" >{{group._serverData.job.title}} 
+                            <span ng-if="group._serverData.state == 0" style="margin-left:10px;color:#33cd5f;font-size:20px;">未开工</span>
+                            <span ng-if="group._serverData.state == 1" style="margin-left:10px;color:#33cd5f;font-size:20px;">进行中</span>
+                            <span ng-if="group._serverData.state == 2" style="margin-left:10px;color:#33cd5f;font-size:20px;">已完工</span>
+                        </dt>
+                    	<dd class="job_info2"><span class="f16r"><i class="f21">{{group._serverData.job.pay_qty}}</i>{{group._serverData.job.pay_unit}}</span><span>{{group._serverData.job.work_type}}</span></dd>
+                    	<dd class="job_info2"><span>工作日期：{{group._serverData.job.work_day_str}}</span></dd>
+                    	<dd class="job_info2"><span>工作时间：{{group._serverData.job.work_hour}}</span></dd>
+                        <dd class="job_info2" ng-if="command"><span>5人以上完工，团长获得奖励<span style="color:#ff0000;">{{reward}}元</span></span></dd>
+                        <dd class="job_info2" ng-if="!command"><span>以团员身份完工后将获得奖励<span style="color:#ff0000;">{{reward}}元</span></span></dd>
+                	</dl>
+            	</li>
+            </ul>
+
+        </div>
+
+        <div class="list">
+            <a class="item" collection-repeat="job in jobs">
+                {{job._serverData.user._serverData.realname}}<span style="margin-left:10px">{{job._serverData.user._serverData.username}}</span>
+                <span class="item-note" ng-if="job._serverData.status == 0">申请中,暂未被录用</span>
+                <span class="item-note" ng-if="job._serverData.status == 1">已被录用</span>
+                <span class="item-note" ng-if="job._serverData.status == 2">工作中</span>
+                <span class="item-note" ng-if="job._serverData.status == 3">已完工</span>
+                <span class="item-note" ng-if="job._serverData.status == 4">被拒绝</span>
+            </a>
+        </div>
+
+
+    
+    </ion-content>
+</ion-view>
+

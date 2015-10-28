@@ -1,0 +1,70 @@
+<ion-view view-title="天天有活" >
+  <ion-content>
+  	<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+    <progress ng-if="loading"></progress>
+	<div class="button-bar bar-balanced" style="width:90%;margin-left:auto;margin-right:auto;margin-top:15px;">
+		<a class="button"  ng-class="clickTab=='waiting' ? 'active' : null" ng-click="changeTab('waiting')">招工中</a>
+		<a class="button"  ng-class="clickTab=='processing' ? 'active' : null" ng-click="changeTab('processing')">进行中</a>
+		<a class="button"  ng-class="clickTab=='completed' ? 'active' : null" ng-click="changeTab('completed')">已完工</a>
+	</div>
+	
+	<br>
+	
+		<ion-list class="jobs" >
+      		<ion-item  collection-repeat="job in jobs"  collection-item-width="'100%'" collection-item-height="140px" >
+      		
+      		<div ng-if = "waitApplyTag" class="item-avatar" >
+	      		<img src="{{job._serverData.postUser._serverData.avatar}}">
+	      		<h2>{{job._serverData.job._serverData.title}}</h2>
+	      		<p>{{job._serverData.job._serverData.pay_qty}}{{job._serverData.job._serverData.pay_unit}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job._serverData.pay_type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;招{{job._serverData.job._serverData.recruit_num}}人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job.createdAt.toRelativeTime()}}前发布</p>
+	      		<p>日期：{{job._serverData.job._serverData.work_day_str}}</p>
+	      		<p>时间：{{job._serverData.job._serverData.work_hour}}</p>
+
+<!-- 	      		<div class="row">
+	  				<div class="col" style="text-align:center;" ng-click="loadEmployeeList('waiting',job.id)">新申请<br ><div>{{job._serverData.applying.length}}人</div></div>
+	  				<div class="col" style="text-align:center;color:#33cd5f;" ng-click="loadEmployeeList('passing',job.id)">已录取<br><div style="color:#33cd5f;">{{job._serverData.passing.length}}人</div></div>
+
+	 				<div class="col" style="text-align:center;color:#ff0000;" ng-click="loadEmployeeList('rejecting',job.id)">已拒绝<br><div style="color:#ff0000;">{{job._serverData.rejecting.length}}人</div></div>
+				</div> -->
+
+				<div class="button-bar">
+				  <a class="button button-small" ng-click="loadEmployeeList('waiting',job.id)">新申请{{job._serverData.applying.length}}人</a>
+				  <a class="button button-balanced button-small" ng-click="loadEmployeeList('passing',job.id)">已录取{{job._serverData.passing.length}}人</a>
+				  <a class="button button-assertive button-small" ng-click="loadEmployeeList('rejecting',job.id)">已拒绝{{job._serverData.rejecting.length}}人</a>
+				</div>
+
+
+			</div>
+
+
+      		<div ng-if = "processingTag" class="item-avatar" >
+	      		<img src="../img/{{job._serverData.job._serverData.work_type}}.png">
+	      		<h2>{{job._serverData.job._serverData.title}}</h2>
+	      		<p>{{job._serverData.job._serverData.pay_qty}}{{job._serverData.job._serverData.pay_unit}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job._serverData.pay_type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;招{{job._serverData.job._serverData.recruit_num}}人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job.createdAt.toRelativeTime()}}前发布</p>
+	      		<p>日期：{{job._serverData.job._serverData.work_day_str}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：{{job._serverData.job._serverData.work_hour}}</p>
+
+				<button class="button button-small button-balanced" ng-click="showEmployeeList(job)">用工列表</button>
+
+			</div>
+
+      		<div ng-if = "completedTag" class="item-avatar" >
+	      		<img src="{{job._serverData.postUser._serverData.avatar}}">
+	      		<h2>{{job._serverData.job._serverData.title}}</h2>
+	      		<p>{{job._serverData.job._serverData.pay_qty}}{{job._serverData.job._serverData.pay_unit}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job._serverData.pay_type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;招{{job._serverData.job._serverData.recruit_num}}人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{job._serverData.job.createdAt.toRelativeTime()}}前发布</p>
+	      		<p>日期：{{job._serverData.job._serverData.work_days}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：{{job._serverData.job._serverData.work_hour}}</p>
+				<button class="button button-small button-balanced" ng-click="showEmployeeList(job)">用工列表</button>
+			</div>	
+
+
+
+
+     		
+
+			</ion-item>
+		</ion-list>
+
+
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

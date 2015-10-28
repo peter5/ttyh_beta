@@ -1,0 +1,40 @@
+{
+  "name": "flex-calendar",
+  "homepage": "https://github.com/Russian60/flex-calendar",
+  "authors": [
+    "Russian Rebouças <russian.reboucas@gmail.com>"
+  ],
+  "description": "An Elegant Calendar Built With Calendar",
+  "keywords": [
+    "calendar",
+    "angular",
+    "flex"
+  ],
+  "main": [
+    "dist/flex-calendar.css",
+    "dist/flex-calendar.min.css",
+    "dist/flex-calendar.js",
+    "dist/flex-calendar.min.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-translate": "~2.7.2"
+  },
+  "_release": "ad87225a81",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ad87225a81b150dc43f2342c29f06991b37d4af6"
+  },
+  "_source": "git://github.com/Russian60/flex-calendar.git",
+  "_target": "*",
+  "_originalSource": "flex-calendar",
+  "_direct": true
+}

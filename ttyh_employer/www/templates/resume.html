@@ -1,0 +1,75 @@
+<ion-view view-title="企业信息设置">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="saveProfile()">保存</button>
+    </ion-nav-buttons>    
+	<ion-content>
+		<div class="list">
+			<div class="item item-divider"></div>
+			<label class="item item-input" >
+				<span class="input-label">公司名称</span>
+                <input ng-model="resumeParams.companyName" type="text" class="text-right" >
+			</label>
+            <label class="item item-input item-select" >
+                <span class="input-label">所属行业</span>
+                <select ng-model="resumeParams.industries" >
+                    <option selected>{{resumeParams.industries}}</option>
+                    <option ng-repeat="g in industries" value="{{g}}">{{g}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select" >
+                <span class="input-label">企业性质</span>
+                <select ng-model="resumeParams.companyType" >
+                    <option selected>{{resumeParams.companyType}}</option>
+                    <option ng-repeat="g in company_type" value="{{g}}">{{g}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select" >
+                <span class="input-label">企业规模</span>
+                <select ng-model="resumeParams.companyScale" >
+                    <option selected>{{resumeParams.companyScale}}</option>
+                    <option ng-repeat="g in companyScale" value="{{g}}">{{g}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select" >
+                <span class="input-label">所在区域</span>
+                <select ng-model="resumeParams.companyRegion" >
+                    <option selected>{{resumeParams.companyRegion}}</option>
+                    <option ng-repeat="g in region" value="{{g.text}}">{{g.text}}</option>
+                </select>
+            </label>
+
+
+            <label class="item item-input" >
+                <span class="input-label">公司地址</span>
+                <input ng-model="resumeParams.companyAddress" type="text" class="text-right" >
+            </label>
+
+            <label class="item item-input" >
+                <span class="input-label">联系人</span>
+                <input ng-model="resumeParams.companyContact" type="text" class="text-right" >
+            </label> 
+
+            <label class="item item-input" >
+                <span class="input-label">手机号</span>
+                <input ng-model="resumeParams.companyContactNum" type="text" class="text-right" >
+            </label>
+
+            <div class="item item-divider">公司简介</div>
+            <label class="item item-input">
+                <textarea placeholder="" ng-model="resumeParams.companyDesc" rows="5" class="content"></textarea>
+            </label>
+
+
+            <div class="item item-divider">企业logo或形象照片
+                  <input type='file' id="asd" /></div>
+                   
+            <div class="item">
+                <img id="img" style="width:100%" src="{{resumeParams.companyLogo}}" ng-click="addPhotoFromLibrary()">
+            </div>
+
+
+	</ion-content>
+</ion-view>

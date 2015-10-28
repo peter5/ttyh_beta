@@ -1,0 +1,49 @@
+<ion-view view-title='职位详情' cache-view='false'>
+    <ion-content class="has-tabs has-header" >
+        <div class="container">
+            <ul class="job_info">
+                <li>
+                    <dl class="job_info_base">
+                        <dt class="size_15">{{job.title}}</dt>
+                        <dd class="job_info2"><span class="f16r"><i class="f21">{{job.pay_qty}}</i>{{job.pay_unit}}</span><span>{{job.work_type}}</span></dd>
+                        <dd class="job_info2"><span>{{job.work_day_str}}</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="jobitem"><span class="info_field size_15">招聘人数</span> <span class="info_text">{{job.recruit_num}}</span> </div>
+                    <div class="jobitem">
+                        <span class="info_field size_15">工作日期</span> <span class="info_text ">{{job.work_day_str}}</span>
+
+                    </div>
+                    <div class="jobitem"><span class="info_field size_15">工作时间</span> <span class="info_text">{{job.work_hour}}</span></div>
+                    <div class="jobitem"><span class="info_field size_15">工作地点</span> <span class="info_text city">{{job.work_location}}</span> </div>
+                    <div class="jobitem"><span class="info_field size_15">结算方式</span> <span class="info_text">{{job.pay_type}}</span> </div>
+                    <div class="jobitem"><span class="info_field size_15">特殊要求</span> <span class="info_text">{{job.special_requirement}}</span> </div>
+                    </dl>
+                </li>
+                <p class="size_15">工作描述</p>
+                <li>                 <span class="info_conent_all">职位介绍：{{job.work_desc}}
+
+工作内容：{{job.work_content}}
+
+人员要求：{{job.recruit_requirement}}
+
+薪资规则：{{job.pay_rule}}
+                </span> </li>
+                <p class="size_15">招聘方</p>
+                    <li>
+                        <dl class="companyinfo">
+                            <dt>{{job.company}}<em class="icon_rz"></em></dt>
+                        </dl>
+                    </li>
+    
+                <p class="size_15">求职须知</p>
+                <li>
+                    <div class="qzxz">申请职位请拨打职位发布联系人电话，我们将为您最快地匹配岗位。每日可申请的职位数量有限，请谨慎申请。
+若在兼职过程中遇到不良商家，可向我们投诉，举报电话举报电话：<a href="tel:010-82447328">010-82447328</a>。</div>
+                </li>
+            </ul>
+        </div>      
+
+  </ion-content>  
+</ion-view>

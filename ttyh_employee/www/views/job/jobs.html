@@ -1,0 +1,43 @@
+
+<ion-view view-title="{{tab}}">
+	<ion-content class="has-tabs has-header">
+		<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+
+      <ul class="filter_nav">
+        <li>
+        	<select ng-model="filter.job">
+        		
+        		<option ng-repeat="g in work_type" value="{{g}}">{{g}}</option>
+    		</select>
+        </li>
+        
+        <li>
+        	<select ng-model="filter.region">
+        		
+        		<option ng-repeat="g in region" value="{{g.text}}">{{g.text}}</option>
+    		</select>
+        </li>
+
+        <li>
+            <button class="button button-small button-balanced" ng-click="search()" style="width:55px;">搜索</button>
+        </li>
+
+      </ul>
+
+
+
+	<ion-list class="jobs" >
+      <ion-item class="item-avatar" collection-repeat="job in jobs" href="#/tab/home/jobs/job-detail/{{job._serverData.job.id}}" collection-item-width="'100%'" collection-item-height="85px">
+
+				<img ng-src="../img/{{work_type_dic[job._serverData.job._serverData.work_type]}}.png" reset-img>
+				<h3 style="font-size:14px;">{{job._serverData.job._serverData.title}}</h3>
+				<p><span class="city">{{job._serverData.job._serverData.work_region.join()}}</span><span class="type">         {{job._serverData.job._serverData.work_type}}</span></p>
+				<div class="inforight"> <span class="money"><i>{{job._serverData.job._serverData.pay_qty}}</i>{{job._serverData.job._serverData.pay_unit}}</span> <span class="js">{{job._serverData.job._serverData.pay_type}}</span> </div>
+				<div class="desc">
+      				<span class="time" style="font-size:13px">{{job._serverData.job.createdAt.toRelativeTime()}}前</span>
+            	</div>
+			</ion-item>
+		</ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>   
+		</ion-content>
+</ion-view>

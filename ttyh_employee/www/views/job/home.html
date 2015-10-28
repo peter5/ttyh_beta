@@ -1,0 +1,39 @@
+
+<ion-view view-title="天天有活">
+
+    <ion-content class="has-tabs has-header">
+		    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+        <progress ng-if="loading"></progress>
+  		  <div class="banner">
+    		    <ul>
+      			   <li ng-click="showJobs_ad1($event)" style=" margin: 0px 0 0;display: block;"><img ng-src="img/bannerbig.png" width="100%"></li>
+    		    </ul>
+  		  </div>
+
+		    <div class="nav">
+    		    <ul class="navtop">
+          			<li ng-click="showJobs('促销导购')"><i class="zdzy"></i><span>促销导购</span></li>
+          			<li ng-click="showJobs('线下推广')"><i class="xxtg"></i><span>线下推广</span></li>
+          			<li ng-click="showJobs('客服人员')"><i class="kfry"></i><span>客服人员</span></li>
+          			<li ng-click="showJobs('服务助理')"><i class="fwzl"></i><span>服务助理</span></li>
+                <li ng-click="showJobs('迎宾礼仪')"><i class="ybly"></i><span>迎宾礼仪</span></li>
+                <li ng-click="showJobs('打包分拣')"><i class="dbfj"></i><span>打包分拣</span></li>                
+                <li ng-click="showJobs('高额补贴')"><i class="gebt"></i><span>高额补贴</span></li>
+                <li ng-click="showJobs('周末职位')"><i class="zmzw"></i><span>周末职位</span></li>
+    		    </ul>
+        </div>
+        <a ng-click="showJobs_ad2()" style=" margin: 0px 0 0;display: block;"><img ng-src="img/bannersamll.png" width="100%"></a>
+		    <p style="margin-left:10px;">推荐职位</p>
+        
+        <ion-list class="jobs" >
+            <ion-item class="item-avatar" collection-repeat="job in jobs" href="#/tab/home/job-detail/{{job._serverData.job.id}}" collection-item-width="'100%'" collection-item-height="85px">
+                <img ng-src="../img/{{work_type_dic[job._serverData.job._serverData.work_type]}}.png" reset-img>
+                <h3 style="font-size:14px;">{{job._serverData.job._serverData.title}}</h3>
+                <p><span class="city" style="font-size:13px;">{{job._serverData.job._serverData.work_region.join()}}</span><span class="type" style="margin-left:10px;">{{job._serverData.job._serverData.work_type}}</span></p>
+                <div class="inforight"> <span class="money"><i>{{job._serverData.job._serverData.pay_qty}}</i>{{job._serverData.job._serverData.pay_unit}}</span> <span class="js">{{job._serverData.job._serverData.pay_type}}</span> </div>
+                <div class="desc"><span class="time" style="font-size:13px">{{job._serverData.job.createdAt.toRelativeTime()}}前</span></div>
+			      </ion-item>
+		    </ion-list>
+    	  <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>	
+		</ion-content>
+</ion-view>

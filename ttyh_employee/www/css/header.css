@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+/*头部搜索*/
+.header .rightsearch{
+  background-image: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/index/qz-index-search.png);
+  background-size: 60%;
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 43px;
+  height: 28px;
+  background-repeat: no-repeat;
+  top: 8px;
+}
+/*banner*/
+.banner{
+	overflow: hidden;
+	position: relative;
+}
+.banner ul li{
+	float:left;
+}
+.banner a {
+  display: block;
+  text-align: center;
+}
+.banner img {
+  height: 120px;
+  width: 100%;
+  border: 0;
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.banner_icon{
+	position:absolute;
+	/*right:10px;*/
+	bottom:5px;
+	right: 50%;
+}
+.banner_icon i{
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-right: 5px;
+  border: 1px solid #fff;
+}
+.banner_icon i.active{
+	background-color: #fff;
+}
+
+.nav{
+	background-color:#fff;
+	padding: 10px 10px 0;
+	border-bottom: 1px solid #E3E4E5;
+}
+.nav .navtop{
+	display: inline-block;	
+}
+.nav .navtop li{
+	float:left;
+	width: 25%;
+	text-align: center;
+	background: #fff;
+	height: 85px;
+	position: relative;
+}
+.nav .navtop li a{
+	display:block;	
+}
+.nav .navtop li span{
+	font-size:14px;	
+	line-height: 30px;
+	color: #181818;
+}
+.nav .navtop li div{
+	background-size:contain;
+	width:60px;
+	height:60px;
+	display: inline-block;
+}
+/*首页标签*/
+.nav .navtop li i{
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: 4px auto 0;
+}
+/*职达自营*/
+.nav .navtop li .zdzy{
+
+	background:url(../img/cxdg.png) no-repeat;
+	background-size:contain;
+}
+/*近期开工*/
+.nav .navtop li .xxtg{
+
+	background:url(../img/xxtg.png) no-repeat;
+	background-size:contain;
+}
+/*周末职位*/
+.nav .navtop li .kfry{
+
+	background:url(../img/kfry.png) no-repeat;
+	background-size:contain;
+}
+/*长期用工*/
+.nav .navtop li .fwzl{
+
+	background:url(../img/fwzl.png) no-repeat;
+	background-size:contain;
+}
+/*日结专区*/
+.nav .navtop li .ybly{
+	background:url(../img/ybly.png) no-repeat;
+	background-size:contain;
+}
+/*小时工*/
+.nav .navtop li .dbfj{
+	background:url(../img/dbfj.png) no-repeat;
+	background-size:contain;
+}
+/*计件工*/
+.nav .navtop li .gebt{
+	background:url(../img/gebt.png) no-repeat;
+	background-size:contain;
+}
+/*有奖金*/
+.nav .navtop li .zmzw{
+	background:url(../img/zmzw.png) no-repeat;
+	background-size:contain;
+}
+
+
+#index h3{
+	height: 40px;
+	line-height: 40px;
+	/* margin-left: 10px; */
+	font-weight: normal;
+	font-size: 16px;
+	display: block;
+	background-color: #fff;
+	padding-left: 10px;
+	border-top: 1px solid #E3E4E5;
+	border-bottom: 1px solid #E3E4E5;
+	color: #a6a6a6;
+	bottom: -1px;
+	position: relative;
+}
+#index h3.recommend{
+	border-left: 6px solid #5e9be4;
+}
+#index h3.recommend .right{
+	float: right;
+	margin-right: 15px;
+	color:#5e9be4;
+}
+#index h3.recommend .right i{
+	width: 10px;
+	height: 10px;
+	margin: 0px auto;
+	display: inline-block;
+	line-height: 40px;
+	text-indent: 40px;
+	overflow: hidden;
+	border-right: 2px solid #5e9be4;
+	border-top: 2px solid #5e9be4;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: relative;
+	top: 2px;
+}
+.hotlist{
+	background-color: #fff;
+	display: inline-block;
+	padding: 5px 10px;		
+	
+}
+.hotlist ul li{
+  float: left;
+  margin: 5px 5px 5px 0;	
+}
+.hotlist ul li a{
+	display: inline-block;
+	background-color: rgba(94,155,228,.15);
+	color: #5E9BE4;
+	padding: 4px 10px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;	
+}
+.hotlist ul li span{
+	width: 13px;
+	height: 13px;
+	margin: 0px auto;
+	display: block;
+	line-height: 50px;
+	text-indent: 80px;
+	overflow: hidden;
+	border-top: 2px solid #9b9b9b;
+	border-right: 2px solid #9b9b9b;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: relative;
+	top: 7px;
+}
+/*今日职位*/
+.today{
+	background-image: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/index/qz-index-todayjob.png);
+	background-size:cover;
+	position: relative;
+	padding: 0 4px;
+	margin: 10px;
+}
+.today ul{
+  /* width: 100%; */
+  margin: 0 auto;
+  /* padding-top: 25px; */
+  height: 100%;
+  margin-left: 20px
+}
+.today ul li{
+	float: left;
+	width:25%;
+	height:100%;
+	font-family:Helvetica Regular;
+	color:#555555;
+}
+.today ul li dl{
+	margin: 0 4px;
+}
+.today ul li dd{
+	float: left;	
+	width: 25%;
+	height: 16px;
+}
+.today ul li dd div{
+	width:100%;
+	height:100%;	
+}
+
+.today ul li:first-child{
+	margin-left:0;
+}
+.today ul li i{
+	background-image: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-index-today.png);
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	
+}
+.today ul li dt{
+	text-align: center;
+	margin: 20% 4px 10%;
+}
+.today ul li dt span{
+  width: 100%;
+  height: 18px;
+  display: block;
+}

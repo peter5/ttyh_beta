@@ -1,0 +1,67 @@
+<ion-view view-title="我的工作本">
+	<ion-nav-buttons side="left" >
+	<button class="button" ng-click="calendar()" ng-if = "processingTag">工作日历</button>
+	</ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+    <a class="button" href="#/tab/explore/group">团抢</a>
+    </ion-nav-buttons>
+
+  <ion-content>
+	<div class="button-bar bar-balanced">
+		<a class="button"  ng-class="clickTab=='waiting' ? 'active' : null" ng-click="changeTab('waiting')">已申请</a>
+    <!-- <a class="button"  ng-click="changeTab('applied')">待上岗</a> -->
+		<a class="button"  ng-class="clickTab=='processing' ? 'active' : null" ng-click="changeTab('processing')">进行中</a>
+		<a class="button"  ng-class="clickTab=='completed' ? 'active' : null" ng-click="changeTab('completed')">已完成</a>
+	</div>
+	
+
+
+	<ion-list class="jobs" >
+      <ion-item collection-repeat="job in jobs"  collection-item-width="'100%'" collection-item-height="85px" >
+        
+        <div ng-if = "waitApplyTag" class="item-avatar" ng-click="WaitingJobDetail(job.id,$event)">
+                <img ng-src="../img/{{work_type_dic[job._serverData.job._serverData.work_type]}}.png" reset-img>
+                <h3>{{job._serverData.job._serverData.title}}</h3>
+                <p><span class="city">{{job._serverData.job._serverData.work_region.join()}}</span><span class="type" style="margin-left:10px;">{{job._serverData.job._serverData.work_type}}</span></p>
+                <div class="inforight"> <span class="money"><i>{{job._serverData.job._serverData.pay_qty}}</i>{{job._serverData.job._serverData.pay_unit}}</span> <span class="js">{{job._serverData.job._serverData.pay_type}}</span> </div>
+                <div class="desc"><span class="time" style="font-size:13px">{{job._serverData.job._serverData.work_day_str}}</span>
+
+                <span ng-if="job._serverData.status == 0" style="margin-left:85%;">申请中</span>
+                <span ng-if="job._serverData.status == 1" style="margin-left:85%;color:#33cd5f;">已通过</span>
+                <span ng-if="job._serverData.status == 4" style="margin-left:85%;color:#ff0000;">被拒绝</span>
+
+                </div>
+        </div>      	
+
+
+        <!-- <div ng-if = "waitInterviewTag" class="item-avatar" ng-click="WaitingInterviewDetail(job.objectId,$event)">
+                <img ng-src="{{job.enterprise.avatar_url|avatarFilter}}" reset-img>
+                <h3>{{job.title}}</h3>
+                <p><span class="city">{{job.work_location}}</span><span class="type" style="margin-left:10px;">{{job.work_type}}</span></p>
+                <div class="inforight"> <span class="money"><i>{{job.pay_qty}}</i>{{job.pay_unit}}</span> <span class="js">{{job.pay_type}}</span> </div>
+                <div class="desc"><span class="time">{{job.work_days}}</span></div>
+          
+        </div> -->
+
+      	<div ng-if = "completedTag" class="item-avatar" ng-click="CompletedJobDetail(job.id,$event)">
+                <img ng-src="../img/{{work_type_dic[job._serverData.job._serverData.work_type]}}.png" reset-img>
+                <h3>{{job._serverData.job._serverData.title}}</h3>
+                <p><span class="city">{{job._serverData.job._serverData.work_region.join()}}</span><span class="type" style="margin-left:10px;">{{job._serverData.job._serverData.work_type}}</span></p>
+                <div class="inforight"> <span class="money"><i>{{job._serverData.job._serverData.pay_qty}}</i>{{job._serverData.job._serverData.pay_unit}}</span> <span class="js">{{job._serverData.job._serverData.pay_type}}</span> </div>
+                <div class="desc"><span class="time" style="font-size:13px">{{job._serverData.job._serverData.work_day_str}}</span></div>
+        </div>
+
+      	<div ng-if = "processingTag" class="item-avatar" ng-click="ProcessingJobDetail(job.id,$event)">			
+                <img ng-src="../img/{{work_type_dic[job._serverData.job._serverData.work_type]}}.png" reset-img>
+                <h3>{{job._serverData.job._serverData.title}}</h3>
+                <p><span class="city">{{job._serverData.job._serverData.work_region.join()}}</span><span class="type" style="margin-left:10px;">{{job._serverData.job._serverData.work_type}}</span></p>
+                <div class="inforight"> <span class="money"><i>{{job._serverData.job._serverData.pay_qty}}</i>{{job._serverData.job._serverData.pay_unit}}</span> <span class="js">{{job._serverData.job._serverData.pay_type}}</span> </div>
+                <div class="desc"><span class="time" style="font-size:13px">{{job._serverData.job._serverData.work_day_str}}</span></div>
+        </div>
+
+		</ion-item>
+	</ion-list>
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

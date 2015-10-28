@@ -1,0 +1,22 @@
+<div class="modal">
+	<ion-header-bar>
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="priceModal.hide()">关闭</button>
+	  <div class="h1 title">选择工作日期</div>
+	  <button class="button button-balanced" ng-click="savePrice()">保存</button>
+	</div>
+	</ion-header-bar>
+
+	<ion-content >
+			<label class="item item-input" style="padding-right:26px">
+				<span class="input-label">团长奖励</span>
+                <input ng-model="priceParams.command" type="text" class="text-right"  style="background-color:#FFFFFF;">
+			</label>  
+
+			<label class="item item-input" style="padding-right:26px">
+				<span class="input-label">团员奖励</span>
+                <input ng-model="priceParams.member" type="text" class="text-right"  style="background-color:#FFFFFF;">
+			</label>   
+
+    </ion-content>
+</div>

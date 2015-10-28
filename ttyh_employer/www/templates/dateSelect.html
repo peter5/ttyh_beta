@@ -1,0 +1,29 @@
+<div class="modal">
+	<ion-header-bar>
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="dateSelectModal.hide()">关闭</button>
+	  <button class="button button-balanced" ng-click="saveDatePicked()">保存</button>
+	</div>
+	</ion-header-bar>
+
+	<ion-content >
+		<div class="list" >
+			<a class="item" ng-click="selectDate(0)">
+			    开工日期
+			    <span class="item-note">
+			      {{dateSelectParams.start}}
+			    </span>
+			</a>
+		
+	
+			<a class="item " ng-click="selectDate(1)">
+			   
+			    完工日期
+			    <span class="item-note">
+			      {{dateSelectParams.end}}
+			    </span>
+			</a>
+		</div>      
+
+    </ion-content>
+</div>

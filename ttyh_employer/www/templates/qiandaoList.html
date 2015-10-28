@@ -1,0 +1,24 @@
+<div class="modal">
+	<ion-header-bar>
+	<div class="bar bar-header">
+	  <button class="button button-balanced" ng-click="signModal.hide()">关闭</button>
+	  <div class="h1 title">选择日期</div>
+	  <button class="button button-balanced" ng-click="saveSign()">保存签到</button>
+	</div>
+	</ion-header-bar>
+
+	<ion-content >
+		<flex-calendar options="options" events="events"></flex-calendar>
+
+		<div class="item item-divider" style="font-size:12px;">当前签到日期：{{currentDay}}，请对完成当日工作内容的人员进行标记</div>
+        
+        <ion-checkbox ng-repeat="item in signList"
+                      ng-model="item.checked" 
+                      ng-checked="item.checked">
+          <span style="margin-right=20px;">{{item.name}}</span><span style="margin-left:20px;">{{item.phone}}</span>
+        </ion-checkbox>
+        
+
+
+    </ion-content>
+</div>

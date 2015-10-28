@@ -1,0 +1,30 @@
+<ion-view view-title="我的团抢">
+	<ion-content>
+		<br>
+		<div class="button-bar"  style="width:94%;margin-left:auto;margin-right:auto;margin-bottom:10px;">
+            <button class="button  button-balanced button-small"   ng-click="joinGroup()">我加入的团</button>
+            <button class="button  button-balanced button-small"   ng-click="myGroup()">我创建的团</button>
+ 		</div>
+
+ 		<li class="item"  ng-if="bar">我创建的团</li>
+      	<li class="item"  ng-if="!bar">我加入的团</li>
+
+
+
+  	    <ion-item class="item-avatar" collection-repeat="group in groups"  collection-item-width="'100%'" collection-item-height="120px" href="#/tab/explore/group/group-detail/{{group.id}}">
+
+        <img ng-src="img/group2.png" reset-img>
+        <span style="margin-left:10px;font-size:16px;font-weight:500;font-weight:bold;">{{group._serverData.name}}</span><br>
+        <span style="margin-left:10px;font-size:13px;">团长的工号：{{group._serverData.command._serverData.personal_invite_code}}<span style="margin-left:20px;font-size:13px;">团长昵称：{{group._serverData.command._serverData.realname}}</span></span><br>
+		<span style="margin-left:10px;font-size:13px;">参团佣金：1%<span style="margin-left:50px;font-size:13px;">剩余名额：{{group._serverData.num_left}}</span></span><br>
+		<span style="margin-left:10px;font-size:13px;">截止日期：{{group._serverData.deadline.year + '/'+ (group._serverData.deadline.month+1)+'/'+group._serverData.deadline.day}}</span><span style="margin-left:10px;font-size:13px;">18:30:00</span>
+
+		</ion-item>
+
+
+
+
+	</ion-content>
+
+</ion-view>
+

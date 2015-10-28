@@ -1,0 +1,67 @@
+<ion-view view-title='组团抢职位'>
+    <ion-content>
+    	<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
+			<div class="container">
+            	<ul class="job_info">
+                	<li>
+                    	<dl class="job_info_base">
+                        	<dt class="size_15" >{{job.title}}<i class="f16" style="margin-left:30px;width:100%;font-size:12px;">{{numGroups}}个团正在抢招</i></dt>
+                        	<dd class="job_info2"><span class="f16r"><i class="f21">{{job.pay_qty}}</i>{{job.pay_unit}}</span><span>{{job.work_type}}</span></dd>
+                        	<dd class="job_info2"><span>工作日期：{{job.work_day_str}}</span></dd>
+                        	<dd class="job_info2"><span>工作时间：{{job.work_hour}}</span></dd>
+                    	</dl>
+                	</li>
+                </ul>
+
+      </div>
+
+<!--             <div class="button-bar"  style="width:94%;margin-left:auto;margin-right:auto;margin-bottom:10px;">
+          		  <button class="button  button-balanced button-small"   ng-click="searchGroup()">搜索</button>
+                <button class="button  button-balanced button-small"   ng-click="joinGroup()">我加入的团</button>
+                <button class="button  button-balanced button-small"   ng-click="myGroup()">我创建的团</button>
+ 			      </div> -->
+
+			<div class="bar bar-header item-input-inset" ng-if="searchBar" >
+			  	<label class="item-input-wrapper">
+			    	<i class="icon ion-ios-search placeholder-icon"></i>
+			    	<input type="search" placeholder="输入团长工号查询" ng-model="inputCode">
+			  	</label>
+			  	<button class="button button-balanced" ng-click="searchGroupByCode()">
+			    	搜索
+			  	</button>
+			</div>
+
+
+
+
+
+        <ion-item class="item-avatar" collection-repeat="group in groups"  collection-item-width="'100%'" collection-item-height="140px" >
+
+            <img ng-src="img/group2.png" reset-img>
+            <span style="margin-left:10px;font-size:16px;font-weight:500;font-weight:bold;">{{group._serverData.name}}</span><br>
+            <span style="margin-left:10px;font-size:13px;">团长的工号：{{group._serverData.command._serverData.personal_invite_code}}<span style="margin-left:20px;font-size:13px;">团长昵称：{{group._serverData.command._serverData.realname}}</span></span><br>
+  				  <span style="margin-left:10px;font-size:13px;">参团佣金：1%<span style="margin-left:50px;font-size:13px;">剩余名额：{{group._serverData.num_left}}</span></span><br>
+  				  <span style="margin-left:10px;font-size:13px;">截止日期：{{group._serverData.deadline.year + '/'+ (group._serverData.deadline.month+1)+'/'+group._serverData.deadline.day}}</span><span style="margin-left:10px;font-size:13px;">18:30:00</span><br>
+  				  <button class="button  button-balanced button-small"   ng-click="applyJoinGroup(group)" style="width:50%;margin-left:10px;" ng-if="searchBar">加入</button>
+
+  			</ion-item>
+
+
+
+
+
+
+
+
+	</ion-content>
+
+	<ion-footer-bar class="bar-balanced">
+  		<div class="buttons" ng-click="groupGuide()">
+    		<button class="button " style="border-color:#ffffff;">团抢必读</button>
+  		</div>
+  		<div class="title" style="font-size:14px;">目前剩余{{remain}}个名额可领取</div>
+  		<div class="buttons" ng-click="showcreateGroup()">
+    		<button class="button" style="border-color:#ffffff;">我要建团</button>
+  		</div>
+	</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,52 @@
+<div class="modal">
+	<ion-header-bar>
+		<hi class="title" ng-if="!LoginState">注册</hi>
+		<hi class="title" ng-if="LoginState">登录</hi>
+		<div class="buttons">
+			<button class="button button-balanced" ng-click="transferLoginState()" ng-if="!LoginState">已有账号登录</button>
+			<button class="button button-balanced" ng-click="transferSignupState()" ng-if="LoginState">快速注册</button>
+		</div>
+
+	</ion-header-bar>
+
+	<ion-content >
+		<div class="list" ng-if="!LoginState">
+			<label class="item item-input">
+			<input type="text" placeholder="手机号" ng-model="signupParams.username">
+  			</label>
+  			<label class="item item-input">
+ 			<input type="password" placeholder="密码" ng-model="signupParams.password">
+  			</label>
+
+  			<label class="item item-input">
+ 			<input type="text" placeholder="姓名(请填写真实姓名)" ng-model="signupParams.realname">
+  			</label>
+			<div class="item item-input">
+
+    			<input type="text" placeholder="手机验证码" ng-model="signupParams.verify_code">
+				<button class="button button-balanced" style="margin-right:20px;" ng-click="sendCode()">发送验证码</button>
+  			</div>
+
+		</div>
+
+
+		<div class="list" ng-if="LoginState">
+			<label class="item item-input">
+			<input type="text" placeholder="手机号" ng-model="signupParams.username">
+  			</label>
+  			<label class="item item-input">
+ 			<input type="password" placeholder="密码" ng-model="signupParams.password">
+  			</label>
+
+		</div>
+
+
+
+
+	<button class="button button-block button-balanced" style="width:90%;margin-left:auto;margin-right:auto;" ng-click="signup()" ng-if="!LoginState">注册</button>
+
+	<button class="button button-block button-balanced" style="width:90%;margin-left:auto;margin-right:auto;" ng-click="login()" ng-if="LoginState">登录</button>
+
+	</ion-content>
+
+</div>

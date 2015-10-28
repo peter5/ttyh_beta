@@ -1,0 +1,33 @@
+/* Empty. Add your own CSS if you like */
+
+.filter_nav{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 120%;
+	background: #fff;
+	  border-bottom: 1px solid #E3E4E5;
+}
+.filter_nav li{
+	border-right: 0;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	position: relative;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:5px;
+}
+
+
+.filter_nav li select {
+	width:100%;
+	display: block;
+	height: 28px;
+    border: none;
+    background: #fff;
+    color: #333;
+
+	border:0;border:none;
+}

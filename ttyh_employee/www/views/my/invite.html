@@ -1,0 +1,55 @@
+<ion-view view-title="邀请朋友">
+	<ion-content>
+
+	<div class="banner">
+    	<ul>
+		   <li ng-click="showJobs_ad1($event)" style=" margin: 0px 0 0;display: block;"><img ng-src="img/bannerbig.png" width="100%"></li>
+    	</ul>
+  	</div>
+
+	<div class="button-bar bar-balanced" style="width:94%;margin-left:auto;margin-right:auto;margin-bottom:10px;margin-top:10px;">
+
+		<a class="button button-small"  ng-class="clickTab=='processing' ? 'active' : null" ng-click="changeTab('processing')">如何推荐</a>
+		<a class="button button-small"  ng-class="clickTab=='completed' ? 'active' : null" ng-click="changeTab('completed')">我的推荐</a>
+	</div>  	
+
+	<div ng-if="clickTab == 'processing'">
+		<div class="card">
+		  	<div class="item item-divider">第一步：建立推荐关系</div>
+		  	<div class="item item-text-wrap">被推荐人注册时填写推荐人的工号，注册成功后即可与推荐人建立推荐关系。</div>
+		</div>
+		<div class="card">
+		  	<div class="item item-divider">第二步：坐等奖励上门</div>
+		  	<div class="item item-text-wrap">面向推荐人，被推荐人首次通过天天有活上工后，可获得被推荐人上工薪资5%的薪资奖励，推荐越多，奖励越多。</div>
+		</div>
+
+		<div class="card">
+		  	<div class="item item-divider">第三步：提现钱钱到手</div>
+		  	<div class="item item-text-wrap">被推荐人上工后，推荐人奖励即可解冻，不满300元提现，收取3元手续费，满300元提现，免手续费，一个工作日内到账。</div>
+		</div>
+	</div>
+
+
+	<div ng-if="clickTab == 'completed'">
+		<span style="margin-left:10px;font-size:12px;">奖励总金额：<span style="color:#FF0000;font-size:12px;">￥0.00</span><span style="margin-left:10px;font-size:12px;">可提现：</span><span style="color:#FF0000;font-size:12px;">￥0.00</span><span style="margin-left:10px;font-size:12px;">已提现：</span><span style="color:#FF0000;font-size:12px;">￥0.00</span>
+		<div class="row" style="text-align:center;">
+  			<div class="col" >姓名</div>
+  			<div class="col">手机</div>
+  			<div class="col">首次上工</div>
+  			<div class="col">奖励金额</div>
+		</div>
+		<div class="row" collection-repeat="job in users" style="text-align:center;">
+  			<div class="col" style="font-family:Microsoft YaHei;">{{job._serverData.realname}}</div>
+  			<div class="col">{{job._serverData.username}}</div>
+  			<div class="col">{{job._serverData.has_worked}}</div>
+  			<div class="col">0.00</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	</ion-content>
+</ion-view>

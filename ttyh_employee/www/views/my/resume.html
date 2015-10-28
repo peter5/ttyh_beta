@@ -1,0 +1,54 @@
+<ion-view view-title="个人资料">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon" ng-click="saveProfile()">保存</button>
+    </ion-nav-buttons>
+	<ion-content>
+		<div class="list">
+			<div class="item item-divider"></div>
+			<label class="item item-input" style="padding-right:26px">
+				<span class="input-label">手机号</span>
+                <input ng-model="resumeParams.phone" type="text" class="text-right" disabled="disabled" style="background-color:#FFFFFF;">
+			</label>
+			<label class="item item-input" style="padding-right:26px">
+				<span class="input-label">姓名</span>
+                <input ng-model="resumeParams.name" type="text" class="text-right" disabled="disabled" style="background-color:#FFFFFF;">
+			</label>
+
+            <label class="item item-input item-select" >
+                <span class="input-label">性别</span>
+                <select ng-model="resumeParams.gender" >
+                    <option selected>{{resumeParams.gender}}</option>
+					<option ng-repeat="g in genders" value="{{g.name}}">{{g.name}}</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-select" >
+                <span class="input-label">所在区域</span>
+                <select ng-model="resumeParams.region" >
+                    <option selected>{{resumeParams.region}}</option>
+                    <option ng-repeat="g in region" value="{{g.text}}">{{g.text}}</option>
+                </select>
+            </label>
+
+         			
+
+            <label class="item item-input item-select">
+                <span class="input-label">出生年份</span>
+                <select ng-model="resumeParams.birthyear">
+                    <option selected>{{resumeParams.birthyear}}</option>
+					<option ng-repeat="y in years" value="{{y}}">{{y}}</option>
+                </select>
+            </label>
+
+
+
+			  <div class="item item-divider">工作经历/自我介绍</div>
+            <label class="item item-input">
+          		<textarea placeholder="完善资料，可以帮助您提高录取率" ng-model="resumeParams.desc" rows="5" class="content"></textarea>
+        	</label>
+
+			
+
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="添加银行卡">
+	<ion-content>
+		<div class="item item-divider">请核对账号信息，以免影响提现</div>
+
+		<label class="item item-input" style="padding-right:26px">
+			<span class="input-label">银行卡号</span>
+            <input ng-model="bankCard.num" type="text" class="text-right"  >
+		</label>
+
+
+		<label class="item item-input" style="padding-right:26px">
+			<span class="input-label">账户姓名</span>
+            <input ng-model="bankCard.name" type="text" class="text-right"  >
+		</label>
+
+		<label class="item item-input" style="padding-right:26px">
+			<span class="input-label">开户银行</span>
+            <input ng-model="bankCard.bank" type="text" class="text-right" >
+		</label>
+
+		<label class="item item-input" style="padding-right:26px">
+			<span class="input-label">开户支行</span>
+            <input ng-model="bankCard.branch" type="text" class="text-right" >
+		</label>
+		<div class="button-bar" style="width:90%;margin-left:auto;margin-right:auto;margin-top:10px;">
+			<button class="button  button-balanced"   ng-click="saveBankCard()">保存</button>
+		</div>
+
+	</ion-content>
+</ion-view>

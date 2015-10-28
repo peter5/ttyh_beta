@@ -1,0 +1,761 @@
+
+@charset "utf-8";
+/*求职方-职位*/
+.job_list {
+	padding-top: 20px;
+	margin-bottom:70px;
+}
+
+/*求职方-职位-列表*/
+.job_list li {
+	background-color: #FFF;
+	
+	border-bottom: 1px solid #E3E4E5;
+	position: relative
+}
+.job_list li:first-child {
+	border-top: 1px solid #E3E4E5;
+}
+.job_list .no_job_font{
+	display: inline-block;
+  	width: 100%;
+  	text-align: center;
+  	color: #D4D4D4;
+}
+.no_job{
+	display:none;
+}
+.zp_alljob_list_more{
+	padding-top: 0px;
+	margin-bottom:60px;
+}
+.zp_alljob_list_more li{
+	border-top:0 !important;
+	display:none;
+	text-align:center;
+}
+.zp_alljob_list_more li p{
+	padding-top: 30px;
+	font-size: 16px;
+	color: #a6a6a6;
+}
+.new_bottom{
+	margin-bottom:0px;
+}
+.qz_alljob_list_page{
+	height: 60px;
+  	line-height: 60px;
+}
+.qz_alljob_list_page .qz_alljob_con{
+/*	border: 1px solid #ccc;
+*/  	height: 25px;
+  	display: inline-block;
+  	line-height: 25px;
+}
+.qz_alljob_list_page{
+	height: 60px;
+  	line-height: 60px;
+}
+.qz_alljob_list_page i{
+	width: 80px;
+  	height: 25px;
+  	display: inline-block;
+}
+.qz_alljob_list_page .totalPageNum{
+	width: 30px;
+  	/*height: 15px;*/
+  	display: inline-block;
+}
+.qz_alljob_list_page .unable{
+	color:#ccc;
+}
+.qz_alljob_list_page .totalPage{
+	color:#a6a6a6;
+	display:inline-block;
+}
+.qz_alljob_list_page input{
+	text-align:center;
+	width: 40px;
+  	border: 0;
+  	border-left: 1px solid #ccc;
+  	border-right: 1px solid #ccc;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+/*分页*/
+.zp_alljob_list_more .qz_alljob_list_page{
+	display:block;
+}
+.job_list li .job_time{
+	position: absolute;
+	top: 18px;
+	right: 20px;
+	width: 46px;
+	text-align: center;
+	color:#a6a6a6;
+}
+/*职位列表的评论 */
+.job_list li .job_pinglun{
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	width: 100px;
+	text-align: center;
+}
+/*好评论 */
+.high{
+	color:#dc6c6d !important;
+}
+.high i{
+	width: 18px;
+	height: 18px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background-color: #dc6c6d;
+	color: #fff;
+	display: inline-block;
+	line-height: 18px;
+	text-align:center;
+}
+
+.low{
+	color:#0C3 !important;
+}
+.low i{
+	width: 18px;
+	height: 18px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background-color: #0C3;
+	color: #fff;
+	display: inline-block;
+	line-height: 18px;
+	text-align:center;
+}
+.job_list li dl {
+	/*width: 70%;*/
+	padding:  10px 10px 10px 15px;
+}
+.job_list li dl .job_list1 span {
+	margin-right: 10px;
+	color: #a6a6a6;
+}
+.job_list li dl .job_list1 span.city {
+	margin-right: 10px;
+	color: #5e9be4;
+}
+.job_list li dl .job_list2 span {
+	margin-right: 10px;
+	color: #4CC2A0;
+}
+.job_list li dt {
+	font-size: 16px;
+	width:100%;
+	position: relative;
+}
+.job_list li dt .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /*width:210px;*/
+  max-width:265px;
+  display:inline-block;
+}
+.job_list li dd {
+	height:20px;
+	line-height:20px;
+}
+.ptop0{
+	padding-top:0 !important;	
+}
+
+.job_list1 .money{
+	float:right;
+	font-size:16px;
+	color:#e37173 !important;
+}
+.job_list1 .money i{
+	font-size:23px;	
+}
+.job_list1 .settlemen{
+	float:right;
+	font-size:16px;
+}
+
+
+/*奖励*/
+.job_jiangli{
+  width: 50px;
+  color: #fff !important;
+  background-color: #5e9be4;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  line-height:18px;
+  position: relative;
+  margin-left: 5px;
+  top: -4px;
+}
+
+/*搜索*/
+
+
+.search{
+	height: 30px;
+	margin:10px;
+	background-color:#f2f2f2;
+}
+
+.search .search_txt{
+	height: 30px;
+	border:none;
+	background-color: #e2e5e5;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 100%;
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-search.png) no-repeat;
+	background-position: 30%;
+	background-size: 20px;
+	
+}
+.search .search_txt[placeholder]{
+	text-align: center;
+	line-height:30px;
+	font-size:14px;
+}
+
+.search_title{
+	margin-left: 10px;
+	height: 30px;
+	line-height:30px;
+	color:#4b4b4b;
+}
+.search_list li{
+	height:30px;
+	line-height:30px;
+	background-color:#fff;
+	padding-left: 10px;
+	border-bottom: 1px solid #E3E4E5;
+	color:#a7a7a7;
+
+}
+.search_list li:first-child{
+	border-top: 1px solid #E3E4E5;
+}
+.nocity{
+	color:#9b9b9b;
+	text-align:center;
+	margin-top:40px;
+}
+/*搜索页面*/
+.search_header{
+	width: 100%;
+	background: #5e9be4;
+	font-size: 16px;
+	color: #FFF;
+	padding: 9px 10px;
+}
+.search_div{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-search.png) no-repeat;
+	background-origin: content-box;
+	background-position: 10px;
+	background-color: #fff;
+	height: 26px;
+	width: 75%;
+	display: inline-block;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+}
+.search_input{
+  border: none;
+  height: 24px;
+  margin-left: 10px;
+  line-height: 24px;
+  margin-top: 1px;
+  border-radius: 10px;
+  background-image: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/icon-search.png);
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  background-size: contain;
+  background-size: 20px;
+  padding-left: 30px;
+  width: 60%;
+}
+.search_btn{
+	float: right !important;
+	margin-right: 10px;
+	margin-left: 0 !important;
+}
+/*热门推荐*/
+.hot_recommend{
+	margin-top: 10px;
+}
+.hot_recommend span{
+	margin-left: 10px;
+	margin-bottom:4px;
+	height: 30px;
+	line-height: 30px;
+	font-size:16px;
+	width:100%;
+	display:block;
+	color:#a3a3a4;
+	border-bottom: solid 1px #e0e3e3;
+}
+.hot_recommend ul{
+	margin-top:10px;
+	margin-left: 10px;
+}
+.hot_recommend ul li{
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border:1px solid #57bda0;
+	float:left;
+	margin-right:10px;
+	padding:2px 10px;
+	color:#57bda0;
+}
+.hot_recommend ul .typesel{
+	background-color: #57bda0;
+  	color: #fff;
+}
+
+/*搜索-历史记录*/
+.history{
+	margin-top:15px;
+	height: 30px;
+	line-height: 30px;
+	font-size:16px;
+	width:100%;
+	display:block;
+	color:#a3a3a4;
+}
+.history span{
+	margin-left: 10px;
+}
+.history span.remove{
+	float:right;
+	margin-right: 10px;
+}
+.history_list{
+	border-top: solid 1px #e0e3e3;	
+	border-bottom: solid 1px #e0e3e3;
+	background-color:#fff;
+}
+
+.history_list li{
+	height:36px;
+	line-height:36px;
+	margin-left: 10px;
+	color:#a7a7a7;
+	border-bottom: solid 1px #e0e3e3;	
+}
+.history_list li:last-child{
+	border-bottom:none;
+}
+/*求职-所有职位-详情*/
+/*职位详细*/
+.job_info {
+	margin-top: 20px;
+	height:auto;
+}
+.job_info p {
+	/*margin-left: 15px;
+	height: 30px;*/
+	margin-left: 15px;
+	height: 25px;
+	margin-top: -10px;
+}
+.job_info .job_info_more{
+	height: 10px;
+}
+.job_info>li {
+	background-color: #FFF;
+	border-top: 1px solid #E3E4E5;
+	border-bottom: 1px solid #E3E4E5;
+	margin-bottom: 20px;
+	position: relative;
+	padding: 14px;
+}
+.job_info>li dl.job_info_base {
+	margin-right:10px;
+	min-height: 76px;
+}
+.job_info>li dl.job_info_base dt {
+	font-size:16px;
+	width: 100%;
+}
+
+.job_info>li dl.job_info_base dd{
+	margin-top:6px;
+}
+.job_info>li dl.job_info_base .job_info1 span {
+	margin-right: 10px;
+	color: #5E9BE4;
+}
+.job_info>li dl.job_info_base .job_info2 span {
+	margin-right: 10px;
+	color: #a6a6a6;
+}
+.job_info .job_info_pinglun{
+	
+}
+.job_info li .jobitem {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  line-height:22px;
+  
+}
+.job_info li .info_field {
+	width: 60px;
+	display: inline-block;
+	-moz-box-flex:1.0;
+	-webkit-box-flex: 1.0;
+	box-flex: 1.0;
+}
+.job_info li .info_field2 {
+	width: 60px;
+	display: inline-block;
+	position: absolute;
+}
+.job_info li .info_text {
+  /* position: relative; */
+  display: -webkit-box;
+  color: #a6a6a6;
+  /* width: 110px; */
+  overflow: hidden;
+  /* height: 19px; */
+  line-height: 22px;	
+ /* top: 3px;*/
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  -moz-box-flex: 1.0;
+  -webkit-box-flex: 1.0;
+  box-flex: 1.0;
+}
+.job_info li .info_conent {
+	/*position:relative;*/
+	display: inline-block;
+	color: #a6a6a6;
+	word-break: break-all;
+	white-space: pre-wrap;
+	text-justify : auto;
+	text-align: justify;
+	overflow: hidden;
+	margin-left: 72px;
+	margin-right: 10px;
+	height: 80px;
+}
+.job_info li .info_conent_all {
+	/*position:relative;*/
+	display: inline-block;
+	color: #a6a6a6;
+	word-break: break-all;
+	white-space: pre-wrap;
+	text-justify : auto;
+	text-align: justify;
+	overflow: hidden;
+	margin-right: 10px;
+	/*height: 80px;*/
+	font-size:14px;
+	line-height:20px;
+}
+.job_info li .info_conent_all p {
+	 height: 10px;
+}
+.job_info li .companyinfo {
+  margin-right: 10px;
+}
+.job_info li .companyinfo dt{
+	font-size:18px;
+	color:#181818;
+}
+.job_info li .companyinfo dd{
+	color:#a6a6a6;
+	margin-top:10px
+}
+
+.icon_quanqinjiang{
+	position:absolute;
+	top:15px;
+	right:25px;
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-quanqinjiang.png) no-repeat;
+	background-size:contain;
+	width:74px;
+	height:74px;
+}
+.icon_quanqinjiang span{
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-color:#fff;
+	color:#4cc2a0;
+	margin:30px auto;
+	display:block;
+	width:40px;
+	text-align:center;
+}
+
+.f16 {
+	font-size: 16px;
+	color: #4cc2a0 !important;
+}
+.f16r {
+	font-size: 16px;
+	color: #e37173 !important;
+}
+.f21 {
+	font-size: 21px;
+	color: #e37173 !important;
+}
+.icon_date{
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-date.png) no-repeat;
+	padding-top: -4px;
+	position: relative;
+	top: 2px;
+	margin-left: 4px;
+	background-size: contain;
+}
+.moreopen {
+	width: 7px;
+	height: 7px;
+	margin: 0px auto;
+	display: block;
+	line-height: 50px;
+	text-indent: 80px;
+	overflow: hidden;
+	border-left: 2px solid #a6a6a6;
+	border-bottom: 2px solid #a6a6a6;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	bottom: 8px;
+	right: 36px;
+}
+.moreclose{
+	width: 7px;
+	height: 7px;
+	margin: 0px auto;
+	display: block;
+	line-height: 50px;
+	text-indent: 80px;
+	overflow: hidden;
+	border-left: 2px solid #a6a6a6;
+	border-bottom: 2px solid #a6a6a6;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+	transform: rotate(135deg);
+	position: absolute;
+	bottom: 8px;
+	right: 36px;
+}
+
+/*创建简历*/
+.qz_edit {
+	display: block;
+	background-color: #FFF;
+	margin-top: 20px;
+	border-bottom: 1px solid #f1f1f1;
+	height: auto;
+	border-top: 1px solid #efefef;
+	height: auto;
+}
+.job_edit_check {
+	color:#A6A6A6;
+	margin: 14px 0 -4px 24px;
+}
+.job_edit_check2 {
+	color:#A6A6A6;
+	margin: 14px 0 -16px 24px;
+}
+.job_edit_check input {
+	position: relative;
+	top: 3px;
+	margin-right: 8px;
+}
+.job_edit_title {
+	margin: 10px 0 -15px 20px;
+}
+.qz_edit li {
+	line-height: 44px;
+	min-height: 44px;
+	margin-left: 20px;
+	border-bottom: 1px solid #f1f1f1;
+	position: relative;
+}
+.qz_edit li:last-child {
+	border-bottom: none;
+}
+.qz_edit .fieldname {
+
+	margin-top:20px;
+	float: left;
+	color: #585858;
+	position: relative;
+	margin-left: 6px;
+}
+.qz_edit .fieldname i {
+	margin-top:20px;
+	width: 4px;
+	color: red;
+	margin-top: 4px;
+	position: absolute;
+	left: -6px;
+}
+.qz_edit p {
+	margin-left: 80px;
+	text-align: right;
+	min-height: 44px;
+	color: #a6a6a6;
+	padding-right: 10px;
+	overflow:hidden;
+}
+.qz_edit p.fullrow {
+	margin-left: 0px !important;
+	text-align: right;
+	min-height: 44px;
+	color: #a6a6a6;
+	padding-right: 10px;
+	overflow:hidden;
+}
+
+.qz_edit .fieldText {
+	border: none;
+	width: 100%;
+	text-align: right;
+	line-height: 22px;
+	margin-top: 10px;
+}
+.job_edit .fieldText2 {
+	border: none;
+	width: 70%;
+	text-align: right;
+	line-height: 22px;
+	border-right: 1px solid #a6a6a6;
+	padding-right: 6px;
+}
+.qz_edit .fieldText3 {
+	display: inline-block;
+	width: 50px;
+}
+.qz_edit .fieldTextfull {
+	border: none;
+	width: 100%;
+	text-align: left;
+	line-height: 22px;
+	margin-top: 10px;
+	font-size:14px;
+}
+.qz_edit .fieldmuiltselect {
+	background-color: #d9d9d9;
+	color: #FFF;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 6px;
+	padding: 4px 6px;
+	width: 50px;
+}
+.qz_edit .select {
+	background-color: #4cc2a0;
+}
+
+.f_hui{
+	color:#a6a6a6 !important;
+}
+.qz_edit p.h44{ 
+	margin-top: 20px;
+	height:44px;}
+.btn_job {
+	text-align: center;
+	line-height: 30px;
+}
+.btn_job .btn_job_edit {
+	background-color: #4cc2a0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: 10px 20px;
+	width: auto;
+	display: block;
+	color: #FFF;
+}
+.btn_job .btn_job_close {
+	background-color: #5e9be4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: 10px 20px;
+	width: auto;
+	display: block;
+	color: #FFF;
+}
+.btn_job .btn_job_open {
+	background-color: #5e9be4;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin: 10px 20px;
+	width: auto;
+	display: block;
+	color: #FFF;
+}
+
+.notapplyfor{
+	color: #f7f8f9 !important;
+	background-color: #a6a6a6 !important;
+}
+.icon_rz{
+	background:url(../img/rz.png) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+}
+.icon_norz{
+	background:url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-renzheng-select.png) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+}
+
+/*职位信息 已评价显示的图标*/
+.job_info .okpingjia{
+	background: url(http://img.58cdn.com.cn/jianzhi01/pic/m/img/qz-icon-okpingjia.png) no-repeat;
+	background-size: contain;
+	width: 76px;
+	height: 76px;
+	position: absolute;
+	right: 105px;
+	top: 20px;
+}
+.wdate{
+  display: -webkit-inline-box !important;
+  position: relative !important;
+  /*top: 8px !important;*/
+  left: -4px;
+}
+.city{
+	color: #5e9be4 !important;
+}
+
+

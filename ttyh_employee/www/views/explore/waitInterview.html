@@ -1,0 +1,43 @@
+<ion-view view-title="工作详情">
+    <ion-content class="has-header">
+		<div class="container work">
+  			<ul class="work_info">
+    			<li>
+      				<dl>
+        				<dt>{{job.title}}</dt>
+        				<dd><span class="money"><i>{{job.pay_qty}}</i>{{job.pay_unit}}</span><span class="type">{{job.work_type}}</span></dd>
+        				<dd><span class="company">{{job.company}}</span></dd>
+        				<dd><span class="address yinpingaddress">{{job.work_location}}</span><br/><span class="time">2分钟前</span><span class="showjob" ng-click="showJobDetail(jobsession._serverData.jobId,$event)">查看职位<i></i></span></dd>
+      				</dl>
+    			</li>
+  			</ul>
+  			<p class="infotitle">状态</p>
+  			<div class="work_state_info ">
+  		        <div class="state_icon icon_work_2"></div>
+				<div class="state_describe">
+					<h1>商家已录用</h1>
+    				<span>商家已通过您的工作申请</span>
+    				<div class="mianshiyaoqing_info">
+                <dl class="daimianshi_info">
+                    <dd>联&nbsp; 系&nbsp; 人：{{job.contact}}</dd>
+                    <dd>联系电话：<a href="tel:{{job.contact_num}}">{{job.contact_num}}</a></dd>
+                </dl>    
+    				</div>
+					<!--<span>邀请您于打电话确认进行面试，如果您想面试，请选择接受，接受后即可查看具体的联系方式。</span>-->
+					<div class="mianshiyaoqing_info">
+    				<div>若商家为及时联系您，请主动联系商家，确认时间、地点，提早安排您的工作行程</div>
+<!-- 						<a ng-click="JobGiveUp($event)" class="fangqi">放弃</a><a  ng-click="JobAccept($event)" class="jieshou">接受</a>
+						<div class="countdown">{{timerString}}</div>
+						<div class="prompt">求职者需在24小时内做出回应，否则视为放弃面试。</div> -->
+					</div>
+				</div>
+        	</div>
+      		<p class="infotitle">过程</p>
+  			<ul class="process_list">
+  				<!-- 根据不同的状态添加不同的内容 start -->
+  	        	<li><p class="title">商家通过了您的申请</p><p class="datetime">2015-09-08 16:43:16</p><span></span></li>
+        		<li><p class="title">您申请了该职位</p><p class="datetime">2015-09-08 16:43:15</p><span></span></li>
+			</ul>
+		</div>
+   	</ion-content>
+</ion-view>
