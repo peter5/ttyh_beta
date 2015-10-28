@@ -3,7 +3,7 @@
 
 代码供交流学习，请不要用户任何商业活动，server开启了域名保护，以上代码效果请查看Demo，交流qq:197329984 , 请在备注说明ionic交流
 
-请关注微信公众号--天天有活
+请关注微信公众号--[天天有活](http://www.51duangong.com)
 
 
 ![Mou icon](http://www.51duangong.com/images/browse.jpg)
