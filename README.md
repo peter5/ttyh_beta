@@ -8,9 +8,15 @@
 
 Demo
 ---
-* [ttyh_employee](http://www.ebuyme.cn:8100)
-* [ttyh_employer](http://www.ebuyme.cn:8101)
+* [ttyh_employee](http://www.ebuyme.cn:8101)
+* [ttyh_employer](http://www.ebuyme.cn:8100)
 
 
 how to run
 ---
+```
+  $ npm install -g cordova ionic
+  $ ionic platform add ios / ionic platform add android
+  $ ionic build ios / ionic build android
+  $ ionic emulate ios / ionic run android
+```  
